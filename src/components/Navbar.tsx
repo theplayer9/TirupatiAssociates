@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -13,7 +13,14 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const path = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
@@ -25,11 +32,13 @@ export default function Navbar() {
           right: 0,
           zIndex: 1000,
           height: "72px",
-          background: "rgba(17,17,17,0.97)",
-          backdropFilter: "blur(12px)",
-          borderBottom: "1px solid #2e2e2e",
+          background: scrolled ? "rgba(255,255,255,0.98)" : "rgba(255,255,255,0.97)",
+          backdropFilter: "blur(16px)",
+          borderBottom: scrolled ? "1px solid #e5e2db" : "1px solid #eeebe4",
+          boxShadow: scrolled ? "0 2px 16px rgba(0,0,0,0.07)" : "none",
           display: "flex",
           alignItems: "center",
+          transition: "box-shadow 0.3s, border-color 0.3s",
         }}
       >
         <div
@@ -51,7 +60,7 @@ export default function Navbar() {
                 fontSize: "21px",
                 fontWeight: 800,
                 letterSpacing: "0.08em",
-                color: "#fff",
+                color: "#1a1a1a",
                 textTransform: "uppercase",
                 lineHeight: 1,
               }}
@@ -63,12 +72,12 @@ export default function Navbar() {
               style={{
                 fontSize: "9px",
                 letterSpacing: "0.25em",
-                color: "#888",
+                color: "#999",
                 textTransform: "uppercase",
                 marginTop: "3px",
               }}
             >
-              Hinge Manufacturers · Aligarh, India
+              Hardware Manufacturers
             </div>
           </Link>
 
@@ -92,7 +101,7 @@ export default function Navbar() {
                     fontWeight: 600,
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: path === l.href ? "#fff" : "#888",
+                    color: path === l.href ? "#1a1a1a" : "#777",
                     textDecoration: "none",
                     borderBottom: path === l.href ? "2px solid #e8a020" : "2px solid transparent",
                     paddingBottom: "2px",
@@ -107,14 +116,14 @@ export default function Navbar() {
 
           {/* CTA */}
           <div style={{ display: "flex", gap: "16px", alignItems: "center" }} className="hidden-mobile">
-            <span style={{ fontSize: "11px", letterSpacing: "0.1em", color: "#888", textTransform: "uppercase" }}>
-              🇮🇳 Made in India
+            <span style={{ fontSize: "11px", letterSpacing: "0.1em", color: "#999", textTransform: "uppercase" }}>
+              Made in India
             </span>
             <Link
               href="/contact"
               style={{
                 background: "#e8a020",
-                color: "#111",
+                color: "#fff",
                 padding: "11px 24px",
                 fontFamily: "var(--font-barlow), Arial, sans-serif",
                 fontSize: "13px",
@@ -123,6 +132,7 @@ export default function Navbar() {
                 textTransform: "uppercase",
                 textDecoration: "none",
                 display: "inline-block",
+                borderRadius: "2px",
                 transition: "background 0.2s",
               }}
             >
@@ -151,7 +161,7 @@ export default function Navbar() {
                   display: "block",
                   width: "24px",
                   height: "2px",
-                  background: "#f2f0eb",
+                  background: "#1a1a1a",
                 }}
               />
             ))}
@@ -168,12 +178,13 @@ export default function Navbar() {
             left: 0,
             right: 0,
             bottom: 0,
-            background: "#1c1c1c",
+            background: "#ffffff",
             zIndex: 999,
             padding: "32px 24px",
             display: "flex",
             flexDirection: "column",
             gap: "4px",
+            borderTop: "1px solid #e5e2db",
           }}
         >
           {links.map((l) => (
@@ -187,10 +198,10 @@ export default function Navbar() {
                 fontWeight: 700,
                 letterSpacing: "0.06em",
                 textTransform: "uppercase",
-                color: path === l.href ? "#e8a020" : "#f2f0eb",
+                color: path === l.href ? "#e8a020" : "#1a1a1a",
                 textDecoration: "none",
                 padding: "12px 0",
-                borderBottom: "1px solid #2e2e2e",
+                borderBottom: "1px solid #e5e2db",
               }}
             >
               {l.label}
@@ -202,7 +213,7 @@ export default function Navbar() {
             style={{
               marginTop: "24px",
               background: "#e8a020",
-              color: "#111",
+              color: "#fff",
               padding: "16px 24px",
               fontFamily: "var(--font-barlow), Arial, sans-serif",
               fontSize: "16px",
@@ -212,6 +223,7 @@ export default function Navbar() {
               textDecoration: "none",
               textAlign: "center",
               display: "block",
+              borderRadius: "2px",
             }}
           >
             Request a Quote →

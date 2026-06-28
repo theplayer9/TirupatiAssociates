@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name:"", company:"", email:"", phone:"", country:"", product:"", quantity:"", message:"" });
@@ -16,13 +17,14 @@ export default function ContactPage() {
 
   const inputStyle = {
     width:"100%",
-    background:"#1c1c1c",
-    border:"1px solid #2e2e2e",
-    color:"#f2f0eb",
-    padding:"14px 16px",
+    background:"#ffffff",
+    border:"1px solid #e5e2db",
+    color:"#1a1a1a",
+    padding:"13px 16px",
     fontSize:"15px",
     outline:"none",
     fontFamily:"var(--font-inter), sans-serif",
+    borderRadius:"3px",
   };
 
   const labelStyle = {
@@ -31,77 +33,78 @@ export default function ContactPage() {
     fontWeight:600,
     letterSpacing:"0.15em",
     textTransform:"uppercase" as const,
-    color:"#888",
-    marginBottom:"8px",
+    color:"#777",
+    marginBottom:"7px",
   };
 
   return (
     <>
       {/* HERO */}
-      <section style={{ paddingTop:"calc(72px + 80px)", paddingBottom:"80px", background:"#1c1c1c", borderBottom:"1px solid #2e2e2e", position:"relative", overflow:"hidden" }}>
-        <div style={{ position:"absolute", inset:0, backgroundImage:"linear-gradient(rgba(232,160,32,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(232,160,32,0.03) 1px, transparent 1px)", backgroundSize:"60px 60px", pointerEvents:"none" }} />
-        <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px", position:"relative" }}>
-          <div style={{ display:"flex", alignItems:"center", gap:"12px", fontSize:"12px", fontWeight:600, letterSpacing:"0.2em", textTransform:"uppercase", color:"#e8a020", marginBottom:"16px" }}>
+      <section style={{ position:"relative", paddingTop:"calc(72px + 80px)", paddingBottom:"80px", overflow:"hidden" }}>
+        <div style={{ position:"absolute", inset:0 }}>
+          <Image src="/img/hinge-finishes.jpg" alt="Hinges in multiple finishes" fill priority style={{ objectFit:"cover", objectPosition:"center 40%" }} />
+          <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.9) 0%, rgba(10,8,6,0.7) 55%, rgba(10,8,6,0.45) 100%)" }} />
+        </div>
+        <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px", position:"relative", zIndex:2 }}>
+          <div style={{ display:"flex", alignItems:"center", gap:"12px", fontSize:"11px", fontWeight:700, letterSpacing:"0.22em", textTransform:"uppercase", color:"#e8a020", marginBottom:"20px" }}>
             <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>Get in Touch
           </div>
-          <h1 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(42px, 7vw, 80px)", fontWeight:800, textTransform:"uppercase", color:"#fff", lineHeight:1, marginBottom:"16px" }}>Request a Quote</h1>
-          <p style={{ fontSize:"18px", color:"#888", maxWidth:"560px" }}>Fill out the form below and our export team will respond within 24 hours with pricing and product catalogue.</p>
+          <h1 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(52px, 8vw, 96px)", fontWeight:800, textTransform:"uppercase", color:"#ffffff", lineHeight:0.92, marginBottom:"20px" }}>Request<br/><span style={{ color:"#e8a020" }}>a Quote</span></h1>
+          <p style={{ fontSize:"18px", color:"rgba(255,255,255,0.65)", maxWidth:"520px", lineHeight:"1.7" }}>Fill in the form below and our export team will respond within 24 hours with pricing and product catalogue.</p>
         </div>
       </section>
 
       {/* CONTACT SECTION */}
-      <section style={{ background:"#111", padding:"96px 0" }}>
+      <section style={{ background:"#ffffff", padding:"96px 0" }}>
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px" }}>
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1.6fr", gap:"80px", alignItems:"start" }} className="contact-grid">
 
             {/* Left: Info */}
             <div>
-              <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(28px, 3vw, 44px)", fontWeight:800, textTransform:"uppercase", color:"#fff", lineHeight:1.1, marginBottom:"24px" }}>
+              <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(28px, 3vw, 44px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", lineHeight:1.1, marginBottom:"20px" }}>
                 WE RESPOND IN <span style={{ color:"#e8a020" }}>24 HOURS</span>
               </h2>
-              <p style={{ fontSize:"15px", color:"#888", lineHeight:"1.8", marginBottom:"40px" }}>
+              <p style={{ fontSize:"15px", color:"#555", lineHeight:"1.8", marginBottom:"36px" }}>
                 Whether you&apos;re an importer, distributor, contractor, or builder — we&apos;re happy to discuss your requirements and provide a competitive quote. Samples available before bulk ordering.
               </p>
 
-              {/* Contact Details */}
               {[
                 { icon:"📍", label:"Factory Address", value:"Tirupati Associates, Hardware Colony, Aligarh — 202001, Uttar Pradesh, India" },
                 { icon:"📧", label:"Email", value:"info@tirupatiassociates.com" },
                 { icon:"📱", label:"Phone / WhatsApp", value:"+91 98765 43210" },
                 { icon:"🕐", label:"Business Hours", value:"Mon–Sat: 9:00 AM – 6:30 PM IST" },
               ].map((c)=>(
-                <div key={c.label} style={{ display:"flex", gap:"16px", padding:"20px 0", borderBottom:"1px solid #2e2e2e" }}>
+                <div key={c.label} style={{ display:"flex", gap:"16px", padding:"18px 0", borderBottom:"1px solid #f0ede7" }}>
                   <span style={{ fontSize:"24px", flexShrink:0 }}>{c.icon}</span>
                   <div>
-                    <div style={{ fontSize:"11px", fontWeight:600, letterSpacing:"0.12em", color:"#888", textTransform:"uppercase", marginBottom:"4px" }}>{c.label}</div>
-                    <div style={{ fontSize:"14px", color:"#f2f0eb", lineHeight:"1.5" }}>{c.value}</div>
+                    <div style={{ fontSize:"11px", fontWeight:600, letterSpacing:"0.12em", color:"#999", textTransform:"uppercase", marginBottom:"4px" }}>{c.label}</div>
+                    <div style={{ fontSize:"14px", color:"#1a1a1a", lineHeight:"1.5" }}>{c.value}</div>
                   </div>
                 </div>
               ))}
 
-              {/* Quick connects */}
-              <div style={{ marginTop:"32px" }}>
-                <div style={{ fontSize:"11px", fontWeight:600, letterSpacing:"0.15em", color:"#888", textTransform:"uppercase", marginBottom:"12px" }}>Quick Connect</div>
-                <a href="https://wa.me/919876543210" style={{ display:"inline-flex", alignItems:"center", gap:"10px", background:"#25D366", color:"#fff", padding:"12px 24px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"13px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", textDecoration:"none", marginRight:"12px" }}>
+              <div style={{ marginTop:"28px" }}>
+                <div style={{ fontSize:"11px", fontWeight:600, letterSpacing:"0.15em", color:"#999", textTransform:"uppercase", marginBottom:"12px" }}>Quick Connect</div>
+                <a href="https://wa.me/919876543210" style={{ display:"inline-flex", alignItems:"center", gap:"10px", background:"#25D366", color:"#fff", padding:"11px 22px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"13px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", textDecoration:"none", marginRight:"12px", borderRadius:"2px" }}>
                   WhatsApp Us
                 </a>
-                <a href="mailto:info@tirupatiassociates.com" style={{ display:"inline-flex", alignItems:"center", gap:"10px", background:"transparent", color:"#e8a020", border:"1.5px solid #e8a020", padding:"12px 24px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"13px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", textDecoration:"none" }}>
+                <a href="mailto:info@tirupatiassociates.com" style={{ display:"inline-flex", alignItems:"center", gap:"10px", background:"transparent", color:"#e8a020", border:"1.5px solid #e8a020", padding:"11px 22px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"13px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", textDecoration:"none", borderRadius:"2px" }}>
                   Send Email
                 </a>
               </div>
             </div>
 
             {/* Right: Form */}
-            <div style={{ background:"#1c1c1c", border:"1px solid #2e2e2e", padding:"48px" }}>
+            <div style={{ background:"#f7f6f3", border:"1px solid #e5e2db", borderRadius:"6px", padding:"48px", boxShadow:"var(--shadow)" }}>
               {sent ? (
                 <div style={{ textAlign:"center", padding:"48px 0" }}>
                   <div style={{ fontSize:"64px", marginBottom:"24px" }}>✅</div>
-                  <h3 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"32px", fontWeight:800, textTransform:"uppercase", color:"#fff", marginBottom:"12px" }}>ENQUIRY RECEIVED!</h3>
-                  <p style={{ fontSize:"16px", color:"#888" }}>Our export team will contact you within 24 hours with pricing and catalogue.</p>
+                  <h3 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"32px", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", marginBottom:"12px" }}>ENQUIRY RECEIVED!</h3>
+                  <p style={{ fontSize:"16px", color:"#666" }}>Our export team will contact you within 24 hours with pricing and catalogue.</p>
                 </div>
               ) : (
                 <form onSubmit={submit}>
-                  <h3 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"24px", fontWeight:800, textTransform:"uppercase", color:"#fff", marginBottom:"32px", letterSpacing:"0.04em" }}>
+                  <h3 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"24px", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", marginBottom:"32px", letterSpacing:"0.04em" }}>
                     Export Enquiry Form
                   </h3>
 
@@ -142,7 +145,7 @@ export default function ContactPage() {
                       <label style={labelStyle}>Product Category</label>
                       <select name="product" value={form.product} onChange={handle} style={inputStyle}>
                         <option value="">Select product type</option>
-                        {["Butt Hinges","Heavy Duty Hinges","Concealed / Cabinet Hinges","Piano Hinges","Spring Hinges","Custom / OEM Hinges","Mixed / Multiple Types"].map(p=>(
+                        {["Butt Hinges","Heavy Duty Hinges","Concealed / Cabinet Hinges","Piano Hinges","Spring Hinges","Tubular Latches","Ball Bearing Hinges","Cupboard Hinges","Custom / OEM Hinges","Mixed / Multiple Types"].map(p=>(
                           <option key={p} value={p}>{p}</option>
                         ))}
                       </select>
@@ -170,11 +173,11 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <button type="submit" style={{ width:"100%", background:"#e8a020", color:"#111", padding:"16px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"16px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", border:"none", cursor:"pointer" }}>
+                  <button type="submit" style={{ width:"100%", background:"#e8a020", color:"#fff", padding:"15px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"15px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", border:"none", cursor:"pointer", borderRadius:"3px", boxShadow:"0 4px 12px rgba(232,160,32,0.3)" }}>
                     Submit Enquiry →
                   </button>
 
-                  <p style={{ fontSize:"12px", color:"#888", textAlign:"center", marginTop:"16px" }}>
+                  <p style={{ fontSize:"12px", color:"#999", textAlign:"center", marginTop:"16px" }}>
                     We respond within 24 hours · Samples available · No obligation
                   </p>
                 </form>
@@ -185,7 +188,7 @@ export default function ContactPage() {
       </section>
 
       <style>{`
-        input:focus, textarea:focus, select:focus { border-color: #e8a020 !important; }
+        input:focus, textarea:focus, select:focus { border-color: #e8a020 !important; box-shadow: 0 0 0 3px rgba(232,160,32,0.1) !important; }
         @media (max-width: 1024px) {
           .contact-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
         }

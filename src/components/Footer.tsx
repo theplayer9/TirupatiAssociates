@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#1c1c1c",
-        borderTop: "1px solid #2e2e2e",
+        background: "#1a1a1a",
+        borderTop: "3px solid #e8a020",
         padding: "64px 0 32px",
       }}
     >
@@ -45,7 +45,7 @@ export default function Footer() {
             >
               Hinge Manufacturer & Exporter · Since 1990
             </div>
-            <p style={{ fontSize: "14px", color: "#888", lineHeight: "1.7", marginBottom: "20px" }}>
+            <p style={{ fontSize: "14px", color: "#777", lineHeight: "1.7", marginBottom: "20px" }}>
               Premium door hinge manufacturer based in Aligarh, India — the hardware capital of the world. Exporting to 40+ countries with quality you can trust.
             </p>
             <div style={{ display: "flex", gap: "10px" }}>
@@ -56,11 +56,12 @@ export default function Footer() {
                   style={{
                     width: "36px",
                     height: "36px",
-                    border: "1px solid #2e2e2e",
+                    border: "1px solid #333",
+                    borderRadius: "4px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    color: "#888",
+                    color: "#777",
                     textDecoration: "none",
                     fontSize: "14px",
                     transition: "border-color 0.2s, color 0.2s",
@@ -77,7 +78,7 @@ export default function Footer() {
             <h4
               style={{
                 fontFamily: "var(--font-barlow), Arial, sans-serif",
-                fontSize: "13px",
+                fontSize: "12px",
                 fontWeight: 700,
                 letterSpacing: "0.15em",
                 color: "#e8a020",
@@ -94,10 +95,13 @@ export default function Footer() {
                 ["Concealed Hinges", "/products#concealed"],
                 ["Piano Hinges", "/products#piano"],
                 ["Spring Hinges", "/products#spring"],
+                ["Tubular Latches", "/products#tubular"],
+                ["Ball Bearing Hinges", "/products#ballbearing"],
+                ["Cupboard Hinges", "/products#cupboard"],
                 ["Custom / OEM", "/products#custom"],
               ].map(([label, href]) => (
-                <li key={label} style={{ marginBottom: "10px" }}>
-                  <Link href={href} style={{ fontSize: "14px", color: "#888", textDecoration: "none" }}>
+                <li key={label} style={{ marginBottom: "8px" }}>
+                  <Link href={href} style={{ fontSize: "13px", color: "#777", textDecoration: "none" }}>
                     {label}
                   </Link>
                 </li>
@@ -110,7 +114,7 @@ export default function Footer() {
             <h4
               style={{
                 fontFamily: "var(--font-barlow), Arial, sans-serif",
-                fontSize: "13px",
+                fontSize: "12px",
                 fontWeight: 700,
                 letterSpacing: "0.15em",
                 color: "#e8a020",
@@ -128,8 +132,8 @@ export default function Footer() {
                 ["Export Markets", "/export-markets"],
                 ["Contact", "/contact"],
               ].map(([label, href]) => (
-                <li key={label} style={{ marginBottom: "10px" }}>
-                  <Link href={href} style={{ fontSize: "14px", color: "#888", textDecoration: "none" }}>
+                <li key={label} style={{ marginBottom: "8px" }}>
+                  <Link href={href} style={{ fontSize: "13px", color: "#777", textDecoration: "none" }}>
                     {label}
                   </Link>
                 </li>
@@ -142,7 +146,7 @@ export default function Footer() {
             <h4
               style={{
                 fontFamily: "var(--font-barlow), Arial, sans-serif",
-                fontSize: "13px",
+                fontSize: "12px",
                 fontWeight: 700,
                 letterSpacing: "0.15em",
                 color: "#e8a020",
@@ -153,24 +157,24 @@ export default function Footer() {
               Contact
             </h4>
             {[
-              { label: "Address", value: "Hardware Colony, Aligarh — 202001, Uttar Pradesh, India" },
-              { label: "Email", value: "info@tirupatiassociates.com" },
-              { label: "Phone / WhatsApp", value: "+91 98765 43210" },
+              { label: "Address", value: "Sector 2,Talanagri, Aligarh — 202001, Uttar Pradesh, India" },
+              { label: "Email", value: "Tirupatiassociates07@gmail.com" },
+              { label: "Phone / WhatsApp", value: "+91 7310572361" },
             ].map(({ label, value }) => (
               <div key={label} style={{ marginBottom: "14px" }}>
                 <div
                   style={{
-                    fontSize: "11px",
+                    fontSize: "10px",
                     fontWeight: 600,
                     letterSpacing: "0.08em",
-                    color: "#f2f0eb",
+                    color: "#aaa",
                     textTransform: "uppercase",
                     marginBottom: "3px",
                   }}
                 >
                   {label}
                 </div>
-                <div style={{ fontSize: "13px", color: "#888" }}>{value}</div>
+                <div style={{ fontSize: "13px", color: "#777" }}>{value}</div>
               </div>
             ))}
           </div>
@@ -182,10 +186,10 @@ export default function Footer() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            paddingTop: "28px",
-            borderTop: "1px solid #2e2e2e",
+            paddingTop: "24px",
+            borderTop: "1px solid #2a2a2a",
             fontSize: "12px",
-            color: "#444",
+            color: "#555",
             flexWrap: "wrap",
             gap: "12px",
           }}
@@ -197,10 +201,11 @@ export default function Footer() {
                 key={b}
                 style={{
                   padding: "3px 10px",
-                  border: "1px solid #2e2e2e",
+                  border: "1px solid #2a2a2a",
+                  borderRadius: "2px",
                   fontSize: "10px",
                   letterSpacing: "0.1em",
-                  color: "#888",
+                  color: "#666",
                   textTransform: "uppercase",
                 }}
               >
