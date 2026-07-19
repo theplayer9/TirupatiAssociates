@@ -1,5 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import ProductGallery from "./ProductGallery";
+
+// Placeholder image sets (reusing existing site photography) — swap each
+// product's array for real product photos when they're available.
+const DEFAULT_GALLERY = ["/img/hinge-pile.jpg", "/img/hinge-finishes.jpg", "/img/door-lifestyle.jpg"];
 
 const ButtHingeSVG = () => (
   <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" style={{ width:"100%", height:"100%" }}>
@@ -340,8 +345,7 @@ const products = [
       { label: "Standard", value: "BS EN 1935 Grade 11" },
     ],
     variants: ["Plain Bearing", "Ball Bearing", "Spring Loaded", "Anti-Lift", "Concealed Bearing"],
-    photo: "/img/hinge-installed.jpg",
-    photoAlt: "Chrome butt hinge installed on a white door frame",
+    images: ["/img/hinge-installed.jpg", "/img/hinge-finishes.jpg", "/img/hinge-pile.jpg"],
     svg: <ButtHingeSVG />,
   },
   {
@@ -358,6 +362,7 @@ const products = [
       { label: "Standard", value: "IS 1341, DIN 18273" },
     ],
     variants: ["Weld-On Strap Hinge", "T-Hinge", "Parliament Hinge", "Band & Hook", "Pin Hinge"],
+    images: DEFAULT_GALLERY,
     svg: <HeavyDutyHingeSVG />,
   },
   {
@@ -374,6 +379,7 @@ const products = [
       { label: "Standard", value: "EN 15443" },
     ],
     variants: ["Standard Clip-On", "Soft-Close", "Push-to-Open", "Thick Door", "Glass Door"],
+    images: DEFAULT_GALLERY,
     svg: <ConcealedHingeSVG />,
   },
   {
@@ -390,6 +396,7 @@ const products = [
       { label: "Gauge", value: "14GA – 11GA" },
     ],
     variants: ["Standard Piano", "Heavy Piano", "Stainless Piano", "Aluminum Piano", "Custom Cut"],
+    images: DEFAULT_GALLERY,
     svg: <PianoHingeSVG />,
   },
   {
@@ -406,6 +413,7 @@ const products = [
       { label: "Standard", value: "BS EN 1154" },
     ],
     variants: ["Single Action", "Double Action", "Heavy Duty Spring", "Adjustable Spring", "Gravity Pivot"],
+    images: DEFAULT_GALLERY,
     svg: <SpringHingeSVG />,
   },
   {
@@ -422,6 +430,7 @@ const products = [
       { label: "Standard", value: "BS EN 12459" },
     ],
     variants: ["60mm Backset", "76mm Backset", "Bathroom Latch", "Privacy Latch", "Deadlatch"],
+    images: DEFAULT_GALLERY,
     svg: <TubularLatchSVG />,
   },
   {
@@ -438,6 +447,7 @@ const products = [
       { label: "Standard", value: "ANSI/BHMA A156.1" },
     ],
     variants: ["2BB Standard", "4BB Heavy Duty", "NRP (Non-Removable Pin)", "Hospital Tip", "Stainless Sealed"],
+    images: DEFAULT_GALLERY,
     svg: <BallBearingSVG />,
   },
   {
@@ -454,6 +464,7 @@ const products = [
       { label: "Standard", value: "EN 15443 Grade 1" },
     ],
     variants: ["Standard Overlay", "Half Overlay", "Inset", "Soft-Close", "Push-to-Open", "Glass Door"],
+    images: DEFAULT_GALLERY,
     svg: <CupboardHingeSVG />,
   },
   {
@@ -470,6 +481,7 @@ const products = [
       { label: "Certifications", value: "Test reports provided" },
     ],
     variants: ["Drawn to Sample", "Drawn to Spec", "Private Label", "White Label", "Tooling Owned by Buyer"],
+    images: DEFAULT_GALLERY,
     svg: (
       <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" style={{ width:"100%", height:"100%" }}>
         <defs>
@@ -540,11 +552,9 @@ export default function ProductsPage() {
 
               {/* Right */}
               <div style={{ padding:"0 8px" }}>
-                {/* Product Image — real photo if available, else SVG illustration */}
-                {"photo" in p && p.photo ? (
-                  <div style={{ position:"relative", borderRadius:"8px", marginBottom:"24px", height:"260px", overflow:"hidden", border:"1px solid #e5e2db" }}>
-                    <Image src={(p as {photo:string}).photo} alt={(p as {photoAlt:string}).photoAlt} fill style={{ objectFit:"cover", objectPosition:"center" }} />
-                  </div>
+                {/* Product Image — gallery if available, else SVG illustration */}
+                {"images" in p && p.images ? (
+                  <ProductGallery images={p.images} alt={p.name} />
                 ) : (
                   <div style={{ background:"#f7f6f3", border:"1px solid #e5e2db", borderRadius:"8px", padding:"32px", marginBottom:"24px", height:"220px", display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden" }}>
                     {p.svg}
