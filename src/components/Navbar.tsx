@@ -6,8 +6,10 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
+  { href: "/export-markets", label: "Export" },
+  { href: "/quality", label: "Quality" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
-  { href: "/export-markets", label: "Export Markets" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -57,27 +59,17 @@ export default function Navbar() {
             <div
               style={{
                 fontFamily: "var(--font-barlow), 'Arial Narrow', Arial, sans-serif",
-                fontSize: "21px",
+                fontSize: "19px",
                 fontWeight: 800,
-                letterSpacing: "0.08em",
+                letterSpacing: "0.06em",
                 color: "#1a1a1a",
                 textTransform: "uppercase",
-                lineHeight: 1,
+                lineHeight: 1.05,
               }}
             >
-              TIRUPATI{" "}
-              <span style={{ color: "#e8a020" }}>ASSOCIATES</span>
-            </div>
-            <div
-              style={{
-                fontSize: "9px",
-                letterSpacing: "0.25em",
-                color: "#999",
-                textTransform: "uppercase",
-                marginTop: "3px",
-              }}
-            >
-              Hardware Manufacturers
+              TIRUPATI HINGES
+              <br />
+              <span style={{ fontSize: "0.82em", color: "#e8a020" }}>&amp; HARDWARE EXPORTS</span>
             </div>
           </Link>
 
@@ -85,11 +77,11 @@ export default function Navbar() {
           <ul
             style={{
               display: "flex",
-              gap: "32px",
+              gap: "22px",
               listStyle: "none",
               alignItems: "center",
             }}
-            className="hidden-mobile"
+            className="hidden-mobile nav-links"
           >
             {links.map((l) => (
               <li key={l.href}>
@@ -116,7 +108,10 @@ export default function Navbar() {
 
           {/* CTA */}
           <div style={{ display: "flex", gap: "16px", alignItems: "center" }} className="hidden-mobile">
-            <span style={{ fontSize: "11px", letterSpacing: "0.1em", color: "#999", textTransform: "uppercase" }}>
+            <span
+              style={{ fontSize: "11px", letterSpacing: "0.1em", color: "#999", textTransform: "uppercase" }}
+              className="made-in-india"
+            >
               Made in India
             </span>
             <Link
@@ -239,6 +234,13 @@ export default function Navbar() {
         @media (min-width: 769px) {
           .show-mobile { display: none !important; }
           .hidden-mobile { display: flex !important; }
+        }
+        @media (max-width: 1150px) {
+          .made-in-india { display: none !important; }
+          .nav-links { gap: 16px !important; }
+        }
+        @media (max-width: 1024px) {
+          .nav-links a { font-size: 12px !important; }
         }
       `}</style>
     </>
