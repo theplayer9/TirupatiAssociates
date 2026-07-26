@@ -76,7 +76,7 @@ export default function WorldMap() {
         <Marker coordinates={ORIGIN.coordinates}>
           <circle r={5} fill="#e8a020" stroke="#1a1a1a" strokeWidth={1.5} />
           <circle r={11} fill="none" stroke="#e8a020" strokeWidth={1} opacity={0.6} />
-          <text textAnchor="middle" y={-14} style={{ fontFamily: "sans-serif", fontSize: 11, fontWeight: 700, fill: "#c8880a" }}>
+          <text textAnchor="start" x={18} y={-6} style={{ fontFamily: "sans-serif", fontSize: 11, fontWeight: 700, fill: "#c8880a" }}>
             {ORIGIN.name}
           </text>
         </Marker>
