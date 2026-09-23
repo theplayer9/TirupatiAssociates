@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import imgExport from "@/img/export.png";
 
 const slides = [
   {
@@ -18,8 +19,9 @@ const slides = [
     text: "Polished gold to brushed stainless steel — one trusted source for your entire hardware range, manufactured to ISO 9001 standards.",
   },
   {
-    image: "/img/hinge-installed.jpg",
-    alt: "Chrome butt hinge installed on a white door frame",
+    image: imgExport,
+    fit: "contain" as const,
+    alt: "Indian strength, global reach — Tirupati Associates export network",
     heading: "Proudly Manufactured in Uttar Pradesh, India",
     text: "Precision hardware exported from one of India's premier hinge-manufacturing regions to builders and distributors in 40+ countries.",
   },
@@ -36,14 +38,14 @@ export default function HeroSlider() {
   return (
     <section style={{ position:"relative", minHeight:"100vh", display:"flex", alignItems:"center", overflow:"hidden" }}>
       {/* Background slides — crossfade */}
-      <div style={{ position:"absolute", inset:0, zIndex:0 }}>
+      <div style={{ position:"absolute", inset:0, zIndex:0, background:"#0a0806" }}>
         {slides.map((s, i) => (
           <div
-            key={s.image}
+            key={s.alt}
             style={{ position:"absolute", inset:0, opacity: i === active ? 1 : 0, transition:"opacity 1.2s ease" }}
             aria-hidden={i !== active}
           >
-            <Image src={s.image} alt={s.alt} fill priority={i === 0} style={{ objectFit:"cover", objectPosition:"center" }} />
+            <Image src={s.image} alt={s.alt} fill priority={i === 0} sizes="100vw" style={{ objectFit: "fit" in s ? s.fit : "cover", objectPosition:"center" }} />
           </div>
         ))}
         <div style={{ position:"absolute", inset:0, background:"linear-gradient(105deg, rgba(10,8,6,0.88) 0%, rgba(10,8,6,0.72) 50%, rgba(10,8,6,0.35) 100%)" }} />
@@ -77,7 +79,7 @@ export default function HeroSlider() {
           <div style={{ display:"flex", gap:"8px", marginBottom:"36px" }}>
             {slides.map((s, i) => (
               <button
-                key={s.image}
+                key={s.alt}
                 onClick={() => setActive(i)}
                 aria-label={`Show slide ${i + 1}`}
                 aria-current={i === active}

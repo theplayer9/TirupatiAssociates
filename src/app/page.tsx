@@ -12,6 +12,7 @@ import imgPadBolts from "@/img/Bolts.png";
 import imgTowerBolts from "@/img/TowerBolts.png";
 import imgCabinHooks from "@/img/CabinHooks.png";
 import imgGateLatch from "@/img/Latch.png";
+import imgWhyUs from "@/img/img1.png";
 
 const stats = [
   { number: "15+", label: "Years of Experience" },
@@ -196,7 +197,7 @@ export default function HomePage() {
               PRECISION FIRST.<br/><span style={{ color:"#e8a020" }}>ZERO SHORTCUTS.</span>
             </h2>
             <p style={{ fontSize:"16px", color:"rgba(255,255,255,0.65)", lineHeight:"1.7", marginBottom:"32px" }}>
-              Every hinge that leaves our Aligarh facility clears a 12-point quality check — salt-spray tested, load-cycle tested, and verified to the micron on CMM equipment.
+              Every hinge is built to perform — rigorously tested for strength, durability, corrosion resistance, and dimensional precision before it leaves our facility.
             </p>
             <Link href="/quality#manufacturing" style={{ background:"#e8a020", color:"#fff", padding:"13px 30px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"13px", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", textDecoration:"none", borderRadius:"2px", display:"inline-block" }}>
               See Our Process ›
@@ -209,19 +210,15 @@ export default function HomePage() {
       <section style={{ background:"#f7f6f3", padding:"0" }}>
         <div style={{ maxWidth:"1280px", margin:"0 auto" }}>
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", alignItems:"stretch" }} className="why-split">
-            {/* Left: installed hinge photo */}
-            <div style={{ position:"relative", minHeight:"560px" }}>
+            {/* Left: company poster */}
+            <div style={{ position:"relative", minHeight:"560px", background:"#14110e" }} className="why-img">
               <Image
-                src="/img/hinge-installed.jpg"
-                alt="Chrome butt hinge installed on a white door frame"
+                src={imgWhyUs}
+                alt="Tirupati Associates — architectural hardware solutions: manufacturing, skilled people and reliable products"
                 fill
-                style={{ objectFit:"cover", objectPosition:"center" }}
+                sizes="(max-width: 1024px) 100vw, 640px"
+                style={{ objectFit:"contain", objectPosition:"center" }}
               />
-              {/* Label overlay */}
-              <div style={{ position:"absolute", bottom:"28px", left:"28px", background:"rgba(10,8,6,0.75)", backdropFilter:"blur(8px)", border:"1px solid rgba(232,160,32,0.3)", padding:"12px 20px", borderRadius:"3px" }}>
-                <div style={{ fontSize:"10px", fontWeight:700, letterSpacing:"0.2em", textTransform:"uppercase", color:"#e8a020", marginBottom:"3px" }}>Shown</div>
-                <div style={{ fontSize:"13px", fontWeight:600, color:"#fff" }}>SS 304 Butt Hinge · Chrome Plated</div>
-              </div>
             </div>
             {/* Right: why points */}
             <div style={{ padding:"72px 56px", display:"flex", flexDirection:"column", justifyContent:"center" }}>
@@ -382,6 +379,7 @@ export default function HomePage() {
         @media (max-width: 1024px) {
           .feature-split { grid-template-columns: 1fr !important; }
           .why-split { grid-template-columns: 1fr !important; }
+          .why-img { min-height: 0 !important; aspect-ratio: 821 / 1282; max-height: 90vh; }
           .products-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .markets-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .benefits-grid { grid-template-columns: repeat(2, 1fr) !important; }

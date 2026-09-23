@@ -299,43 +299,6 @@ export default function Navbar() {
           gap: 18px;
           flex-shrink: 0;
         }
-        .ta-call {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          text-decoration: none;
-          color: #1a1a1a;
-        }
-        .ta-call-icon {
-          width: 38px;
-          height: 38px;
-          border-radius: 50%;
-          border: 1.5px solid #e8a020;
-          color: #e8a020;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: background 0.2s, color 0.2s;
-        }
-        .ta-call:hover .ta-call-icon { background: #e8a020; color: #ffffff; }
-        .ta-call-text {
-          display: flex;
-          flex-direction: column;
-          font-size: 15px;
-          font-weight: 700;
-          letter-spacing: 0.04em;
-          line-height: 1.1;
-        }
-        .ta-call-text small {
-          font-family: var(--font-inter), Arial, sans-serif;
-          font-size: 10px;
-          font-weight: 500;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          color: #888;
-          margin-bottom: 2px;
-        }
-
         .ta-cta {
           display: inline-flex;
           align-items: center;
@@ -363,7 +326,6 @@ export default function Navbar() {
 
         .ta-link:focus-visible,
         .ta-cta:focus-visible,
-        .ta-call:focus-visible,
         .ta-burger:focus-visible,
         .ta-logo:focus-visible {
           outline: 2px solid #e8a020;
@@ -492,9 +454,6 @@ export default function Navbar() {
         .ta-mobile-contact a svg { color: #e8a020; }
 
         /* ---------- Responsive ---------- */
-        @media (max-width: 1280px) {
-          .ta-call { display: none; }
-        }
         @media (max-width: 1200px) {
           .ta-topbar-note { display: none; }
           .ta-topbar-inner { justify-content: flex-end; }
