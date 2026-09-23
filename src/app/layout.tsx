@@ -3,6 +3,7 @@ import { Barlow_Condensed, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import logo from "@/img/Logo.png";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,8 +16,8 @@ const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow",
 });
 
-const SITE_URL = "https://www.tirupatihinges.com";
-const BRAND = "Tirupati Hinges & Hardware Exports";
+const SITE_URL = "https://www.tirupatiassociates.com";
+const BRAND = "Tirupati Associates";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   description:
     "Leading door hinge manufacturer and exporter from Aligarh, India. Supplying premium quality butt hinges, ball bearing hinges, concealed hinges and heavy-duty hardware to UAE, South Africa, Vietnam and 40+ global markets. ISO 9001 certified.",
   keywords:
-    "door hinge manufacturer India, Aligarh hinge exporter, heavy duty hinges UAE, door hinges South Africa, hinge supplier Vietnam, Tirupati Hinges Hardware Exports, SS hinge manufacturer India, butt hinge exporter",
+    "door hinge manufacturer India, Aligarh hinge exporter, heavy duty hinges UAE, door hinges South Africa, hinge supplier Vietnam, Tirupati Associates, SS hinge manufacturer India, butt hinge exporter",
   authors: [{ name: BRAND }],
   creator: BRAND,
   publisher: BRAND,
@@ -60,9 +61,9 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: BRAND,
-  alternateName: "Tirupati Hinges",
+  alternateName: "Tirupati Associates",
   url: SITE_URL,
-  logo: `${SITE_URL}/img/hinge-pile.jpg`,
+  logo: `${SITE_URL}${logo.src}`,
   description:
     "Door hinge manufacturer and exporter based in Aligarh, India, serving 40+ countries including UAE, South Africa, Vietnam and Kenya.",
   foundingDate: "2010",

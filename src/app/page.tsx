@@ -4,9 +4,9 @@ import { Factory, BadgeCheck, Ship, Zap, ShieldCheck, Settings, Palette, IndianR
 import HeroSlider from "./HeroSlider";
 
 const stats = [
-  { number: "16+", label: "Years of Experience" },
-  { number: "40+", label: "Countries Served" },
-  { number: "500+", label: "Hinge Variants" },
+  { number: "15+", label: "Years of Experience" },
+  { number: "5+", label: "Countries Served" },
+  { number: "500+", label: "Hardware Variants" },
   { number: "10K+", label: "Global Partners" },
 ];
 
@@ -115,7 +115,7 @@ export default function HomePage() {
           </div>
           <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(32px, 4vw, 52px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", lineHeight:1, marginBottom:"16px", maxWidth:"760px" }}>Must-Have Benefits for You</h2>
           <p style={{ fontSize:"16px", color:"#666", lineHeight:"1.8", maxWidth:"700px", marginBottom:"48px" }}>
-            We don&apos;t just manufacture hinges — we deliver value, durability, and trust with every piece. Here are six reasons builders, distributors, and exporters keep coming back to Tirupati Hinges &amp; Hardware Exports.
+            We don&apos;t just manufacture hinges — we deliver value, durability, and trust with every piece. Here are six reasons builders, distributors, and exporters keep coming back to Tirupati Associates.
           </p>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"20px" }} className="benefits-grid">
             {benefits.map((b) => (
@@ -242,7 +242,7 @@ export default function HomePage() {
           </div>
           <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(32px, 4vw, 52px)", fontWeight:800, textTransform:"uppercase", color:"#fff", lineHeight:1, marginBottom:"24px" }}>Every Industry.<br/><span style={{ color:"#e8a020" }}>One Reliable Source.</span></h2>
           <p style={{ fontSize:"15px", color:"rgba(255,255,255,0.55)", maxWidth:"640px", lineHeight:"1.75", marginBottom:"40px" }}>
-            Tirupati Hinges &amp; Hardware Exports&apos; hinges and hardware are trusted across a wide spectrum of industries for their strength, reliability, and corrosion resistance — from heavy industrial use to precision-based furniture applications.
+            Tirupati Associates&apos; hinges and hardware are trusted across a wide spectrum of industries for their strength, reliability, and corrosion resistance — from heavy industrial use to precision-based furniture applications.
           </p>
           <div style={{ display:"flex", flexWrap:"wrap", gap:"10px" }}>
             {["Construction & Building Materials","Furniture Manufacturing","Automotive Industry","Marine Industry","Hospitality & Hotels","Industrial Equipment & Enclosures","Real Estate Development","Government & PWD Projects","Home Appliances","Retail & Interior Fit-Out"].map((ind)=>(

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  --nav-h: 108px;
   --bg-primary: #ffffff;
   --bg-secondary: #f7f6f3;
   --bg-card: #ffffff;
@@ -57,3 +58,7 @@ body {
 .animate-ticker { animation: ticker 28s linear infinite; }
 .animate-pulse-dot { animation: pulse 2s infinite; }
 .animate-fade-up { animation: fadeUp 0.7s ease forwards; }
+
+@media (max-width: 1080px) {
+  :root { --nav-h: 72px; }
+}

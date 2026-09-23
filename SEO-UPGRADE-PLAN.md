@@ -41,7 +41,7 @@ Every visible and machine-readable instance of the old name needs to change. Use
 | `src/components/Navbar.tsx` | `TIRUPATI` / `ASSOCIATES` split logo text | `TIRUPATI HINGES` / `& HARDWARE EXPORTS` (stack on two lines, see §4 design notes) |
 | `src/components/Footer.tsx` | `TIRUPATI ASSOCIATES`, "Premium door hinge manufacturer...", copyright line | Update brand text + `© {year} Tirupati Hinges & Hardware Exports. All rights reserved.` |
 | `src/app/about/page.tsx` | `"About Tirupati"` hero heading, "Tirupati Associates was founded in 1990..." | `"About Tirupati Hinges & Hardware Exports"`, update founding sentence |
-| Contact details | `info@tirupatiassociates.com`, `Tirupatiassociates07@gmail.com` | Update to new domain/email once registered, e.g. `info@tirupatihinges.com` — confirm with the user before publishing any new contact detail |
+| Contact details | `info@tirupatiassociates.com`, `Tirupatiassociates07@gmail.com` | Update to new domain/email once registered, e.g. `info@tirupatiassociates.com` — confirm with the user before publishing any new contact detail |
 | JSON-LD `Organization` schema (new) | — | `name: "Tirupati Hinges & Hardware Exports"` |
 | Social handles / `sameAs` URLs (new) | — | Update once new social profiles exist under the new name |
 
@@ -196,7 +196,7 @@ This expands well beyond a basic `title`/`description` pair. Apply this full che
 - `description` — unique, ≤160 characters, includes primary keyword + call to action
 - `keywords` — comma-separated, page-specific (secondary priority for modern SEO, but still worth setting)
 - `authors` / `creator` / `publisher` — set to `"Tirupati Hinges & Hardware Exports"`
-- `metadataBase` — set once in `layout.tsx` (e.g. `new URL("https://www.tirupatihinges.com")`) so all relative OG/canonical URLs resolve correctly
+- `metadataBase` — set once in `layout.tsx` (e.g. `new URL("https://www.tirupatiassociates.com")`) so all relative OG/canonical URLs resolve correctly
 - `alternates.canonical` — explicit canonical URL per page (prevents duplicate-content issues once product pages exist)
 - `robots` — `{ index: true, follow: true }` explicitly set (and `false` on any thank-you/internal-only pages)
 
@@ -320,7 +320,7 @@ import { products } from "./products/data";
 import { posts } from "./blog/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://www.tirupatihinges.com"; // update to real domain once registered
+  const base = "https://www.tirupatiassociates.com"; // update to real domain once registered
   const staticRoutes = ["", "/products", "/export-markets", "/quality", "/blog", "/about", "/contact"];
   const productRoutes = products.map((p) => `/products/${p.id}`);
   const blogRoutes = posts.map((p) => `/blog/${p.slug}`);
@@ -341,7 +341,7 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://www.tirupatihinges.com/sitemap.xml",
+    sitemap: "https://www.tirupatiassociates.com/sitemap.xml",
   };
 }
 ```
@@ -379,8 +379,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Tirupati Hinges & Hardware Exports",
-      url: "https://www.tirupatihinges.com",
-      logo: "https://www.tirupatihinges.com/img/logo.png",
+      url: "https://www.tirupatiassociates.com",
+      logo: "https://www.tirupatiassociates.com/img/logo.png",
       description: "Door hinge manufacturer and exporter based in Aligarh, India, serving 40+ countries.",
       address: {
         "@type": "PostalAddress",
@@ -407,7 +407,7 @@ export default function manifest(): MetadataRoute.Manifest {
 
 ```tsx
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.tirupatihinges.com"),
+  metadataBase: new URL("https://www.tirupatiassociates.com"),
   title: {
     default: "Tirupati Hinges & Hardware Exports — Premium Door Hinge Manufacturer | Aligarh, India",
     template: "%s | Tirupati Hinges & Hardware Exports",

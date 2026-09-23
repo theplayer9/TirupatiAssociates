@@ -4,12 +4,12 @@ import Image from "next/image";
 import { Package, FileText, Factory, IndianRupee, Ruler, Handshake, MessageSquare, PackageCheck, ClipboardCheck, Ship } from "lucide-react";
 import WorldMapClient from "./WorldMapClient";
 
-const BRAND = "Tirupati Hinges & Hardware Exports";
+const BRAND = "Tirupati Associates";
 
 export const metadata: Metadata = {
   title: "Door Hinge Exporter from India — Shipping to 40+ Countries Worldwide",
   description:
-    "Tirupati Hinges & Hardware Exports is a leading door hinge exporter from Aligarh, India, shipping to the Middle East, Africa, Europe, the Americas, and Asia-Pacific. Free samples, in-house export documentation, and a 24-hour response time.",
+    "Tirupati Associates is a leading door hinge exporter from Aligarh, India, shipping to the Middle East, Africa, Europe, the Americas, and Asia-Pacific. Free samples, in-house export documentation, and a 24-hour response time.",
   keywords:
     "door hinge exporter India, hinge supplier UAE, hinge exporter South Africa, hinge supplier Vietnam, hinge exporter Kenya, hardware export India, global hinge supplier",
   alternates: { canonical: "/export-markets" },
@@ -43,8 +43,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tirupatihinges.com" },
-    { "@type": "ListItem", position: 2, name: "Export", item: "https://www.tirupatihinges.com/export-markets" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tirupatiassociates.com" },
+    { "@type": "ListItem", position: 2, name: "Export", item: "https://www.tirupatiassociates.com/export-markets" },
   ],
 };
 
@@ -54,7 +54,7 @@ export default function ExportMarketsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       {/* HERO */}
-      <section style={{ position:"relative", paddingTop:"calc(72px + 96px)", paddingBottom:"96px", overflow:"hidden" }}>
+      <section style={{ position:"relative", paddingTop:"calc(var(--nav-h) + 96px)", paddingBottom:"96px", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0 }}>
           <Image src="/img/hinge-installed.jpg" alt="Premium hinge ready for global export" fill priority style={{ objectFit:"cover", objectPosition:"center" }} />
           <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.9) 0%, rgba(10,8,6,0.65) 55%, rgba(10,8,6,0.4) 100%)" }} />

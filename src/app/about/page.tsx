@@ -3,19 +3,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { Settings, Wrench, Sparkles, Microscope, Package, Ship } from "lucide-react";
 
-const BRAND = "Tirupati Hinges & Hardware Exports";
+const BRAND = "Tirupati Associates";
 
 export const metadata: Metadata = {
   title: "About Us — Door Hinge Manufacturer Since 2010",
   description:
-    "Tirupati Hinges & Hardware Exports has manufactured premium door hinges from Aligarh, India since 2010. ISO 9001 certified, 40,000 sq ft facility, exporting to 40+ countries.",
-  keywords: "about Tirupati Hinges, hinge manufacturer Aligarh, hardware factory India, ISO 9001 hinge manufacturer",
+    "Tirupati Associates has manufactured premium door hinges from Aligarh, India since 2010. ISO 9001 certified, 40,000 sq ft facility, exporting to 40+ countries.",
+  keywords: "about Tirupati Associates, hinge manufacturer Aligarh, hardware factory India, ISO 9001 hinge manufacturer",
   alternates: { canonical: "/about" },
   openGraph: {
     title: `About Us — Door Hinge Manufacturer Since 2010 | ${BRAND}`,
     description: "16+ years of precision hinge manufacturing from Aligarh, India — the hardware capital of the world.",
     url: "/about",
-    images: [{ url: "/img/door-lifestyle.jpg", width: 1200, height: 630, alt: "Tirupati Hinges & Hardware Exports facility" }],
+    images: [{ url: "/img/door-lifestyle.jpg", width: 1200, height: 630, alt: "Tirupati Associates facility" }],
   },
 };
 
@@ -49,7 +49,7 @@ export default function AboutPage() {
   return (
     <>
       {/* PAGE HERO — lifestyle door photo */}
-      <section style={{ position:"relative", paddingTop:"calc(72px + 96px)", paddingBottom:"96px", overflow:"hidden" }}>
+      <section style={{ position:"relative", paddingTop:"calc(var(--nav-h) + 96px)", paddingBottom:"96px", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0 }}>
           <Image src="/img/door-lifestyle.jpg" alt="Elegant wooden door with premium brass hinge" fill priority style={{ objectFit:"cover", objectPosition:"center 30%" }} />
           <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.87) 0%, rgba(10,8,6,0.6) 60%, rgba(10,8,6,0.35) 100%)" }} />
@@ -58,7 +58,7 @@ export default function AboutPage() {
           <div style={{ display:"flex", alignItems:"center", gap:"12px", fontSize:"11px", fontWeight:700, letterSpacing:"0.22em", textTransform:"uppercase", color:"#e8a020", marginBottom:"20px" }}>
             <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>Our Story
           </div>
-          <h1 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(52px, 8vw, 96px)", fontWeight:800, textTransform:"uppercase", color:"#ffffff", lineHeight:0.92, marginBottom:"20px" }}>About Tirupati Hinges<br/><span style={{ color:"#e8a020" }}>&amp; Hardware Exports</span></h1>
+          <h1 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(52px, 8vw, 96px)", fontWeight:800, textTransform:"uppercase", color:"#ffffff", lineHeight:0.92, marginBottom:"20px" }}>About Tirupati<br/><span style={{ color:"#e8a020" }}>Associates</span></h1>
           <p style={{ fontSize:"18px", color:"rgba(255,255,255,0.65)", maxWidth:"560px", lineHeight:"1.7" }}>16+ years of precision hinge manufacturing from the hardware capital of India — Aligarh, Uttar Pradesh.</p>
         </div>
       </section>

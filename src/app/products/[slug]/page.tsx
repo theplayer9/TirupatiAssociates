@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import { products } from "../data";
 import ProductGallery from "../ProductGallery";
 
-const BRAND = "Tirupati Hinges & Hardware Exports";
-const SITE_URL = "https://www.tirupatihinges.com";
+const BRAND = "Tirupati Associates";
+const SITE_URL = "https://www.tirupatiassociates.com";
 
 export async function generateStaticParams() {
   return products.map((p) => ({ slug: p.id }));
@@ -80,7 +80,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       {/* BREADCRUMB */}
-      <div style={{ background:"#f7f6f3", borderBottom:"1px solid #e5e2db", paddingTop:"72px" }}>
+      <div style={{ background:"#f7f6f3", borderBottom:"1px solid #e5e2db", paddingTop:"var(--nav-h)" }}>
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"18px 40px", fontSize:"12px", color:"#888", display:"flex", gap:"8px", alignItems:"center" }}>
           <Link href="/" style={{ color:"#888", textDecoration:"none" }}>Home</Link>
           <span>/</span>

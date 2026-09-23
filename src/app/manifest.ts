@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Tirupati Hinges & Hardware Exports",
-    short_name: "Tirupati Hinges",
+    name: "Tirupati Associates",
+    short_name: "Tirupati Associates",
     description: "Door hinge manufacturer and exporter based in Aligarh, India, serving 40+ countries.",
     start_url: "/",
     display: "standalone",

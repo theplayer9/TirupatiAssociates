@@ -50,11 +50,11 @@ export default function HeroSlider() {
       </div>
 
       {/* Content */}
-      <div style={{ position:"relative", zIndex:2, maxWidth:"1280px", margin:"0 auto", padding:"120px 40px 80px", width:"100%" }}>
+      <div style={{ position:"relative", zIndex:2, maxWidth:"1280px", margin:"0 auto", padding:"calc(var(--nav-h) + 48px) 40px 80px", width:"100%" }}>
         <div style={{ maxWidth:"640px" }}>
           <div style={{ display:"inline-flex", alignItems:"center", gap:"8px", background:"rgba(232,160,32,0.15)", border:"1px solid rgba(232,160,32,0.5)", padding:"6px 18px", marginBottom:"32px", fontSize:"11px", fontWeight:700, letterSpacing:"0.25em", color:"#e8a020", textTransform:"uppercase" }}>
             <span style={{ width:"6px", height:"6px", background:"#e8a020", borderRadius:"50%", flexShrink:0 }} className="animate-pulse-dot" />
-            16+ Years of Manufacturing Excellence
+            15+ Years of Manufacturing Excellence
           </div>
 
           <h1 style={{ fontFamily:"var(--font-barlow), 'Arial Narrow', Arial, sans-serif", fontSize:"clamp(44px, 7vw, 84px)", fontWeight:800, letterSpacing:"-0.01em", textTransform:"uppercase", color:"#ffffff", lineHeight:0.98, marginBottom:"24px" }}>
@@ -106,8 +106,8 @@ export default function HeroSlider() {
 
           {/* Export flags */}
           <div style={{ display:"flex", alignItems:"center", gap:"10px", flexWrap:"wrap" }}>
-            <span style={{ fontSize:"11px", letterSpacing:"0.15em", color:"rgba(255,255,255,0.4)", textTransform:"uppercase" }}>Now shipping to</span>
-            {[{flag:"🇦🇪",label:"UAE"},{flag:"🇿🇦",label:"S. Africa"},{flag:"🇻🇳",label:"Vietnam"},{flag:"🇰🇪",label:"Kenya"}].map(({flag,label})=>(
+            <span style={{ fontSize:"11px", letterSpacing:"0.15em", color:"rgba(255,255,255,0.4)", textTransform:"uppercase" }}>Shipment available across</span>
+            {[{flag:"RU",label:"Russia"},{flag:"🇿🇦",label:"S. Africa"},{flag:"🇻🇳",label:"Vietnam"},{flag:"JP",label:"Japan"},{flag:"SG",label:"Singapur"},{flag:"AE",label:"UAE"},{flag:"AT",label:"Austria"}].map(({flag,label})=>(
               <span key={label} style={{ display:"flex", alignItems:"center", gap:"5px", padding:"4px 12px", border:"1px solid rgba(255,255,255,0.2)", borderRadius:"2px", fontSize:"11px", letterSpacing:"0.08em", color:"rgba(255,255,255,0.6)", textTransform:"uppercase", backdropFilter:"blur(4px)" }}>
                 <span style={{ fontSize:"15px" }}>{flag}</span>{label}
               </span>

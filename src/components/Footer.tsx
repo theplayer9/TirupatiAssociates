@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import logo from "@/img/Logo.png";
 import { Globe2, MessageCircle, Mail } from "lucide-react";
 
 export default function Footer() {
@@ -22,19 +24,11 @@ export default function Footer() {
         >
           {/* Brand */}
           <div>
-            <div
-              style={{
-                fontFamily: "var(--font-barlow), Arial, sans-serif",
-                fontSize: "20px",
-                fontWeight: 800,
-                letterSpacing: "0.05em",
-                color: "#fff",
-                textTransform: "uppercase",
-                lineHeight: 1.15,
-              }}
-            >
-              TIRUPATI HINGES <span style={{ color: "#e8a020" }}>&amp; HARDWARE EXPORTS</span>
-            </div>
+            <Image
+              src={logo}
+              alt="Tirupati Associates logo"
+              style={{ width: "100%", maxWidth: "240px", height: "auto", display: "block" }}
+            />
             <div
               style={{
                 fontSize: "10px",
@@ -42,7 +36,7 @@ export default function Footer() {
                 color: "#888",
                 textTransform: "uppercase",
                 marginBottom: "20px",
-                marginTop: "6px",
+                marginTop: "14px",
               }}
             >
               Hinge Manufacturer &amp; Exporter · 16+ Years of Experience
@@ -263,7 +257,7 @@ export default function Footer() {
             gap: "12px",
           }}
         >
-          <span>© {new Date().getFullYear()} Tirupati Hinges &amp; Hardware Exports. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Tirupati Associates. All rights reserved.</span>
           <div style={{ display: "flex", gap: "10px" }}>
             {["ISO 9001", "DGFT", "Made in India 🇮🇳"].map((b) => (
               <span

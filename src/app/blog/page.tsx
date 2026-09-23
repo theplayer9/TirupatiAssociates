@@ -3,12 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { posts } from "./data";
 
-const BRAND = "Tirupati Hinges & Hardware Exports";
+const BRAND = "Tirupati Associates";
 
 export const metadata: Metadata = {
   title: "Hinge Buying Guides & Manufacturing Insights",
   description:
-    "Practical guides on hinge selection, materials, manufacturing, and exporting door hardware — written by Tirupati Hinges & Hardware Exports, a door hinge manufacturer and exporter based in Aligarh, India.",
+    "Practical guides on hinge selection, materials, manufacturing, and exporting door hardware — written by Tirupati Associates, a door hinge manufacturer and exporter based in Aligarh, India.",
   keywords:
     "hinge buying guide, door hinge blog, SS 304 vs SS 316, hinge manufacturing process, exporting hardware India",
   alternates: { canonical: "/blog" },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: `Hinge Buying Guides & Manufacturing Insights | ${BRAND}`,
     description: "Practical guides on hinge selection, materials, manufacturing, and exporting door hardware.",
     url: "/blog",
-    images: [{ url: "/img/hinge-pile.jpg", width: 1200, height: 630, alt: "Tirupati Hinges & Hardware Exports blog" }],
+    images: [{ url: "/img/hinge-pile.jpg", width: 1200, height: 630, alt: "Tirupati Associates blog" }],
   },
 };
 
@@ -24,9 +24,9 @@ export default function BlogIndexPage() {
   return (
     <>
       {/* HERO */}
-      <section style={{ position:"relative", paddingTop:"calc(72px + 96px)", paddingBottom:"80px", overflow:"hidden" }}>
+      <section style={{ position:"relative", paddingTop:"calc(var(--nav-h) + 96px)", paddingBottom:"80px", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0 }}>
-          <Image src="/img/hinge-pile.jpg" alt="Tirupati Hinges & Hardware Exports blog — hinge buying guides" fill priority style={{ objectFit:"cover", objectPosition:"center 60%" }} />
+          <Image src="/img/hinge-pile.jpg" alt="Tirupati Associates blog — hinge buying guides" fill priority style={{ objectFit:"cover", objectPosition:"center 60%" }} />
           <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.88) 0%, rgba(10,8,6,0.65) 55%, rgba(10,8,6,0.4) 100%)" }} />
         </div>
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px", position:"relative", zIndex:2 }}>

@@ -3,19 +3,19 @@ import Image from "next/image";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import ContactForm from "./ContactForm";
 
-const BRAND = "Tirupati Hinges & Hardware Exports";
+const BRAND = "Tirupati Associates";
 
 export const metadata: Metadata = {
   title: "Request a Quote",
   description:
-    "Contact Tirupati Hinges & Hardware Exports for door hinge pricing, samples, and export documentation. We respond within 24 hours. Factory in Aligarh, Uttar Pradesh, India.",
-  keywords: "door hinge supplier contact, hinge export enquiry, request hinge quote India, Tirupati Hinges contact",
+    "Contact Tirupati Associates for door hinge pricing, samples, and export documentation. We respond within 24 hours. Factory in Aligarh, Uttar Pradesh, India.",
+  keywords: "door hinge supplier contact, hinge export enquiry, request hinge quote India, Tirupati Associates contact",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: `Request a Quote — ${BRAND}`,
     description: "Fill in the form and our export team will respond within 24 hours with pricing and product catalogue.",
     url: "/contact",
-    images: [{ url: "/img/hinge-finishes.jpg", width: 1200, height: 630, alt: "Contact Tirupati Hinges & Hardware Exports" }],
+    images: [{ url: "/img/hinge-finishes.jpg", width: 1200, height: 630, alt: "Contact Tirupati Associates" }],
   },
 };
 
@@ -23,7 +23,7 @@ export default function ContactPage() {
   return (
     <>
       {/* HERO */}
-      <section style={{ position:"relative", paddingTop:"calc(72px + 80px)", paddingBottom:"80px", overflow:"hidden" }}>
+      <section style={{ position:"relative", paddingTop:"calc(var(--nav-h) + 80px)", paddingBottom:"80px", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0 }}>
           <Image src="/img/hinge-finishes.jpg" alt="Hinges in multiple finishes" fill priority style={{ objectFit:"cover", objectPosition:"center 40%" }} />
           <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.9) 0%, rgba(10,8,6,0.7) 55%, rgba(10,8,6,0.45) 100%)" }} />

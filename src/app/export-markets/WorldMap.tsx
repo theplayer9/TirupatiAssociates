@@ -32,7 +32,7 @@ export default function WorldMap() {
         height={460}
         style={{ width: "100%", height: "auto", display: "block" }}
         role="img"
-        aria-label="World map highlighting countries Tirupati Hinges & Hardware Exports ships to"
+        aria-label="World map highlighting countries Tirupati Associates ships to"
       >
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>

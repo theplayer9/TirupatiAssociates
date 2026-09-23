@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { products } from "./products/data";
 import { posts } from "./blog/data";
 
-const BASE_URL = "https://www.tirupatihinges.com";
+const BASE_URL = "https://www.tirupatiassociates.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ["", "/products", "/export-markets", "/quality", "/blog", "/about", "/contact"];

@@ -3,12 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { products } from "./data";
 
-const BRAND = "Tirupati Hinges & Hardware Exports";
+const BRAND = "Tirupati Associates";
 
 export const metadata: Metadata = {
   title: "Door Hinges & Hardware Manufacturer — Full Product Range",
   description:
-    "Browse the full Tirupati Hinges & Hardware Exports product range: butt hinges, heavy duty hinges, concealed cabinet hinges, piano hinges, spring hinges, tubular latches, ball bearing hinges, cupboard hinges and custom OEM manufacturing. Manufactured in Aligarh, India and export-ready worldwide.",
+    "Browse the full Tirupati Associates product range: butt hinges, heavy duty hinges, concealed cabinet hinges, piano hinges, spring hinges, tubular latches, ball bearing hinges, cupboard hinges and custom OEM manufacturing. Manufactured in Aligarh, India and export-ready worldwide.",
   keywords:
     "door hinge manufacturer India, butt hinges, ball bearing hinges, concealed hinges, heavy duty hinges, piano hinges, tubular latches, cupboard hinges, custom OEM hinges Aligarh",
   alternates: { canonical: "/products" },
@@ -25,8 +25,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tirupatihinges.com" },
-    { "@type": "ListItem", position: 2, name: "Products", item: "https://www.tirupatihinges.com/products" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tirupatiassociates.com" },
+    { "@type": "ListItem", position: 2, name: "Products", item: "https://www.tirupatiassociates.com/products" },
   ],
 };
 
@@ -36,9 +36,9 @@ export default function ProductsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       {/* PAGE HERO */}
-      <section style={{ position:"relative", paddingTop:"calc(72px + 96px)", paddingBottom:"96px", overflow:"hidden" }}>
+      <section style={{ position:"relative", paddingTop:"calc(var(--nav-h) + 96px)", paddingBottom:"96px", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0 }}>
-          <Image src="/img/hinge-pile.jpg" alt="Precision-manufactured door hinges by Tirupati Hinges & Hardware Exports" fill priority style={{ objectFit:"cover", objectPosition:"center 60%" }} />
+          <Image src="/img/hinge-pile.jpg" alt="Precision-manufactured door hinges by Tirupati Associates" fill priority style={{ objectFit:"cover", objectPosition:"center 60%" }} />
           <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.88) 0%, rgba(10,8,6,0.65) 55%, rgba(10,8,6,0.4) 100%)" }} />
         </div>
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px", position:"relative", zIndex:2 }}>

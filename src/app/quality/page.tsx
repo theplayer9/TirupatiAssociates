@@ -3,12 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Beaker, RotateCw, Ruler, FlaskConical, Search, PackageCheck, Check } from "lucide-react";
 
-const BRAND = "Tirupati Hinges & Hardware Exports";
+const BRAND = "Tirupati Associates";
 
 export const metadata: Metadata = {
   title: "Quality Control — ISO 9001 Certified Hinge Manufacturing",
   description:
-    "Tirupati Hinges & Hardware Exports operates a rigorous ISO 9001:2015 quality management system — salt spray testing, load cycle testing, and CMM dimensional verification on every batch of door hinges manufactured in Aligarh, India.",
+    "Tirupati Associates operates a rigorous ISO 9001:2015 quality management system — salt spray testing, load cycle testing, and CMM dimensional verification on every batch of door hinges manufactured in Aligarh, India.",
   keywords:
     "ISO 9001 hinge manufacturer, salt spray tested hinges, BIS certified hinges, hinge quality control India, hinge testing standards",
   alternates: { canonical: "/quality" },
@@ -42,8 +42,8 @@ export default function QualityPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tirupatihinges.com" },
-      { "@type": "ListItem", position: 2, name: "Quality", item: "https://www.tirupatihinges.com/quality" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tirupatiassociates.com" },
+      { "@type": "ListItem", position: 2, name: "Quality", item: "https://www.tirupatiassociates.com/quality" },
     ],
   };
 
@@ -52,7 +52,7 @@ export default function QualityPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       {/* HERO */}
-      <section style={{ position:"relative", paddingTop:"calc(72px + 96px)", paddingBottom:"96px", overflow:"hidden" }}>
+      <section style={{ position:"relative", paddingTop:"calc(var(--nav-h) + 96px)", paddingBottom:"96px", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0 }}>
           <Image src="/img/hinge-installed.jpg" alt="Quality-tested stainless steel hinge installed on a door" fill priority style={{ objectFit:"cover", objectPosition:"center" }} />
           <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.9) 0%, rgba(10,8,6,0.65) 55%, rgba(10,8,6,0.4) 100%)" }} />
