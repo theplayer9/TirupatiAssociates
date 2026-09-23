@@ -2,6 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { Factory, BadgeCheck, Ship, Zap, ShieldCheck, Settings, Palette, IndianRupee, Globe2, Check } from "lucide-react";
 import HeroSlider from "./HeroSlider";
+import imgHinges from "@/img/Hinges.png";
+import imgLocks from "@/img/Locks.png";
+import imgHandles from "@/img/Handles.png";
+import imgBrackets from "@/img/Bracket.png";
+import imgHooks from "@/img/Hooks.png";
+import imgCabinets from "@/img/Cabinets.png";
+import imgPadBolts from "@/img/Bolts.png";
+import imgTowerBolts from "@/img/TowerBolts.png";
+import imgCabinHooks from "@/img/CabinHooks.png";
+import imgGateLatch from "@/img/Latch.png";
 
 const stats = [
   { number: "15+", label: "Years of Experience" },
@@ -11,15 +21,16 @@ const stats = [
 ];
 
 const products = [
-  { id: "butt-hinges",             num: "01", name: "Butt Hinges",            desc: "Classic mortised hinges for residential and commercial doors. SS, brass & zinc alloy finishes.",        specs: ["SS 304", "SS 316", "Brass", "Zinc Alloy"] },
-  { id: "heavy-duty-hinges",       num: "02", name: "Heavy Duty Hinges",       desc: "Industrial-grade weld-on & strap hinges for gates, warehouses and heavy doors. Rated to 500 kg.",       specs: ["500kg Rated", "Industrial", "Weld-On"] },
-  { id: "concealed-cabinet-hinges",num: "03", name: "Concealed Hinges",        desc: "Hidden cup hinges for modern cabinets. Three-way adjustable with soft-close damper options.",           specs: ["35mm Cup", "Soft-Close", "Overlay"] },
-  { id: "piano-continuous-hinges", num: "04", name: "Piano / Continuous",      desc: "Full-length continuous hinges that distribute load evenly. Available up to 1800 mm custom lengths.",    specs: ["1800mm", "Aluminum", "SS"] },
-  { id: "spring-hinges",           num: "05", name: "Spring Hinges",           desc: "Self-closing spring hinges for fire-rated doors. Adjustable tension, single & double action.",          specs: ["Self-Closing", "Fire-Rated", "Adj. Tension"] },
-  { id: "tubular-latches",         num: "06", name: "Tubular Latches",         desc: "Precision stainless steel spring-bolt latches. 60 mm and 76 mm backsets, multiple finishes.",           specs: ["SS 304", "60/76mm", "BS EN 12459"] },
-  { id: "ball-bearing-hinges",     num: "07", name: "Ball Bearing Hinges",     desc: "ABEC-5 stainless steel ball bearings — whisper-quiet, 200,000+ cycle life without lubrication.",       specs: ["ABEC-5", "200k Cycles", "ANSI"] },
-  { id: "cupboard-hinges",         num: "08", name: "Cupboard Hinges",         desc: "Overlay, half-overlay, and inset European cup hinges for kitchens and wardrobes. Push-to-open ready.",  specs: ["3-Way Adj.", "Soft-Close", "EN 15443"] },
-  { id: "custom-oem-hinges",       num: "09", name: "Custom / OEM",            desc: "Fully bespoke hinge manufacturing to your drawings or samples. MOQ from 500 pcs. Private-label ready.", specs: ["OEM", "Custom Size", "Private Label"] },
+  { num: "01", name: "Hinges",              img: imgHinges,     desc: "Butt, parliament and heavy-duty door hinges in brass, stainless and mild steel. Precision-machined knuckles for smooth, low-play rotation under load." },
+  { num: "02", name: "Locks",               img: imgLocks,      desc: "Mortise lock bodies and sashlocks with lever and cylinder operation. Hardened steel bolts, plated cases and matched strike plates." },
+  { num: "03", name: "Door Handles",        img: imgHandles,    desc: "Lever-on-plate handles in brass, zinc alloy and antique finishes. Sprung mechanism for positive lever return." },
+  { num: "04", name: "Brackets",            img: imgBrackets,   desc: "Load-bearing shelf and support brackets in brass and steel. Gusseted profile resists deflection under static load." },
+  { num: "05", name: "Hooks",               img: imgHooks,      desc: "Single and double robe and coat hooks in brass, black iron and ceramic-knob designs. Pre-drilled for direct screw fixing." },
+  { num: "06", name: "Cabinets",            img: imgCabinets,   desc: "Cabinet knobs, pull handles and flush ring pulls in cast brass and ceramic. Threaded fixings for secure panel mounting." },
+  { num: "07", name: "Pad / Brenton Bolts", img: imgPadBolts,   desc: "Zinc-plated steel pad bolts with padlock staple for surface-mounted doors and gates. Solid round shoot in a pressed-steel guide." },
+  { num: "08", name: "Tower Bolts",         img: imgTowerBolts, desc: "Surface-mounted tower bolts in black powder-coated and zinc-plated steel. Cranked handle, round shoot and matching keep." },
+  { num: "09", name: "Cabin Hooks",         img: imgCabinHooks, desc: "Hook-and-eye cabin hooks in polished brass and black cast iron. Hold doors, windows and shutters open at a fixed position." },
+  { num: "10", name: "Gate Latch",          img: imgGateLatch,  desc: "Ring-handle and bar gate latches in black iron and satin steel. Gravity-drop bar and keep for positive self-latching." },
 ];
 
 const whyPoints = [
@@ -137,23 +148,28 @@ export default function HomePage() {
               <div style={{ display:"flex", alignItems:"center", gap:"12px", fontSize:"11px", fontWeight:700, letterSpacing:"0.22em", textTransform:"uppercase", color:"#e8a020", marginBottom:"12px" }}>
                 <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>The Complete Range
               </div>
-              <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(36px, 4vw, 58px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", lineHeight:1 }}>A Hinge for<br/><span style={{ color:"#e8a020" }}>Every Door</span></h2>
+              <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(36px, 4vw, 58px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", lineHeight:1 }}>Hardware for<br/><span style={{ color:"#e8a020" }}>Every Door</span></h2>
             </div>
             <Link href="/products" style={{ color:"#e8a020", border:"2px solid #e8a020", padding:"11px 26px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"13px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", textDecoration:"none", borderRadius:"2px" }}>See Full Range</Link>
           </div>
 
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"16px" }} className="products-grid">
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(5,1fr)", gap:"16px" }} className="products-grid">
             {products.map((p)=>(
-              <Link key={p.id} href={`/products/${p.id}`} style={{ textDecoration:"none", display:"block", position:"relative", background:"#f7f6f3", borderRadius:"4px", overflow:"hidden", border:"1px solid #ece9e2" }} className="product-card">
-                <div style={{ padding:"28px 28px 24px" }}>
+              <Link key={p.num} href="/products" style={{ textDecoration:"none", display:"block", position:"relative", background:"#f7f6f3", borderRadius:"4px", overflow:"hidden", border:"1px solid #ece9e2" }} className="product-card">
+                <div style={{ position:"relative", width:"100%", aspectRatio:"1 / 1", overflow:"hidden", background:"#ece9e2" }}>
+                  <Image
+                    src={p.img}
+                    alt={`${p.name} — Tirupati Associates`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 20vw"
+                    style={{ objectFit:"contain", objectPosition:"center" }}
+                    className="product-card-img"
+                  />
+                </div>
+                <div style={{ padding:"22px 22px 24px" }}>
                   <div style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"11px", fontWeight:700, letterSpacing:"0.15em", color:"#bbb", textTransform:"uppercase", marginBottom:"8px" }}>{p.num}</div>
                   <div style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"19px", fontWeight:800, letterSpacing:"0.03em", color:"#1a1a1a", textTransform:"uppercase", marginBottom:"10px", lineHeight:1.1 }}>{p.name}</div>
-                  <p style={{ fontSize:"13px", color:"#666", lineHeight:"1.65", marginBottom:"18px" }}>{p.desc}</p>
-                  <div style={{ display:"flex", gap:"5px", flexWrap:"wrap" }}>
-                    {p.specs.map((s)=>(
-                      <span key={s} style={{ padding:"3px 9px", background:"rgba(232,160,32,0.09)", border:"1px solid rgba(232,160,32,0.22)", fontSize:"10px", fontWeight:700, letterSpacing:"0.1em", color:"#c8880a", textTransform:"uppercase", borderRadius:"2px" }}>{s}</span>
-                    ))}
-                  </div>
+                  <p style={{ fontSize:"13px", color:"#666", lineHeight:"1.65", marginBottom:"32px" }}>{p.desc}</p>
                 </div>
                 {/* Bottom accent bar */}
                 <div style={{ height:"3px", background:"linear-gradient(90deg, #e8a020, transparent)", opacity:0 }} className="card-accent" />
@@ -357,6 +373,11 @@ export default function HomePage() {
       <style>{`
         .product-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1) !important; border-color: #e8a020 !important; transform: translateY(-2px); transition: all 0.2s; }
         .product-card:hover .card-accent { opacity: 1 !important; }
+        .product-card-img { transition: transform 0.4s ease; }
+        .product-card:hover .product-card-img { transform: scale(1.04); }
+        @media (max-width: 1200px) {
+          .products-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
         .market-card:hover { border-color: #e8a020 !important; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.2s; }
         @media (max-width: 1024px) {
           .feature-split { grid-template-columns: 1fr !important; }
@@ -365,8 +386,10 @@ export default function HomePage() {
           .markets-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .benefits-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 640px) {
           .products-grid { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 768px) {
           .markets-grid { grid-template-columns: 1fr !important; }
           .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .benefits-grid { grid-template-columns: 1fr !important; }
