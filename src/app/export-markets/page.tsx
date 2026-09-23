@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Package, FileText, Factory, IndianRupee, Ruler, Handshake, MessageSquare, PackageCheck, ClipboardCheck, Ship } from "lucide-react";
 import WorldMapClient from "./WorldMapClient";
+import imgExport from "@/img/export.png";
 
 const BRAND = "Tirupati Associates";
 
@@ -55,8 +56,8 @@ export default function ExportMarketsPage() {
 
       {/* HERO */}
       <section style={{ position:"relative", paddingTop:"calc(var(--nav-h) + 96px)", paddingBottom:"96px", overflow:"hidden" }}>
-        <div style={{ position:"absolute", inset:0 }}>
-          <Image src="/img/hinge-installed.jpg" alt="Premium hinge ready for global export" fill priority style={{ objectFit:"cover", objectPosition:"center" }} />
+        <div style={{ position:"absolute", inset:0, background:"#0a0806" }}>
+          <Image src={imgExport} alt="Indian strength, global reach — Tirupati Associates export network" fill priority sizes="100vw" style={{ objectFit:"contain", objectPosition:"center" }} />
           <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.9) 0%, rgba(10,8,6,0.65) 55%, rgba(10,8,6,0.4) 100%)" }} />
         </div>
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px", position:"relative", zIndex:2 }}>
