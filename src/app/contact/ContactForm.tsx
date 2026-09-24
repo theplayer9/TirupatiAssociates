@@ -6,14 +6,34 @@ import { categories } from "../products/catalog";
 export default function ContactForm() {
   const [form, setForm] = useState({ name:"", company:"", email:"", phone:"", country:"", product:"", quantity:"", message:"" });
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+  const [honeypot, setHoneypot] = useState("");
 
   const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const submit = (e: React.FormEvent) => {
+  // Sends the enquiry to /api/contact, which saves it to Google Sheets and emails it to us
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    if (sending) return;
+    setSending(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, website: honeypot }),
+      });
+      const data = await res.json().catch(() => null);
+      if (!res.ok || !data?.ok) throw new Error(data?.error || "Something went wrong. Please try again.");
+      setSent(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const inputStyle = {
@@ -44,10 +64,10 @@ export default function ContactForm() {
         <div style={{ textAlign:"center", padding:"48px 0" }}>
           <CheckCircle2 size={56} color="#e8a020" strokeWidth={1.75} style={{ marginBottom:"24px" }} />
           <h3 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"32px", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", marginBottom:"12px" }}>ENQUIRY RECEIVED!</h3>
-          <p style={{ fontSize:"16px", color:"#666" }}>Our export team will contact you within 24 hours with pricing and catalogue.</p>
+          <p style={{ fontSize:"16px", color:"#666" }}>Thank you for contacting Tirupati Associates. Our team will get back to you within 24 hours with pricing and catalogue details.</p>
         </div>
       ) : (
-        <form onSubmit={submit}>
+        <form onSubmit={submit} style={{ position:"relative" }}>
           <h3 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"24px", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", marginBottom:"32px", letterSpacing:"0.04em" }}>
             Export Enquiry Form
           </h3>
@@ -117,8 +137,19 @@ export default function ContactForm() {
             />
           </div>
 
-          <button type="submit" style={{ width:"100%", background:"#e8a020", color:"#fff", padding:"15px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"15px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", border:"none", cursor:"pointer", borderRadius:"3px", boxShadow:"0 4px 12px rgba(232,160,32,0.3)" }}>
-            Submit Enquiry →
+          {/* Honeypot: hidden from people, filled by spam bots */}
+          <div aria-hidden="true" style={{ position:"absolute", left:"-10000px", width:"1px", height:"1px", overflow:"hidden" }}>
+            <label>Website<input type="text" name="website" tabIndex={-1} autoComplete="off" value={honeypot} onChange={(e)=>setHoneypot(e.target.value)} /></label>
+          </div>
+
+          {error && (
+            <div role="alert" style={{ background:"#fdecea", border:"1px solid #f5c2bd", color:"#a1291c", padding:"12px 16px", borderRadius:"3px", fontSize:"14px", marginBottom:"16px" }}>
+              {error}
+            </div>
+          )}
+
+          <button type="submit" disabled={sending} style={{ opacity: sending ? 0.7 : 1, width:"100%", background:"#e8a020", color:"#fff", padding:"15px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"15px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", border:"none", cursor: sending ? "wait" : "pointer", borderRadius:"3px", boxShadow:"0 4px 12px rgba(232,160,32,0.3)" }}>
+            {sending ? "Sending…" : "Submit Enquiry →"}
           </button>
 
           <p style={{ fontSize:"12px", color:"#999", textAlign:"center", marginTop:"16px" }}>
