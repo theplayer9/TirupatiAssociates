@@ -15,7 +15,7 @@ const slides = [
     image: "/img/img2.jpg",
     alt: "Tirupati Associates handles and cabinet hardware in premium finishes",
     heading: "500+ Variants, Every Finish You Need",
-    text: "Polished gold to brushed stainless steel — one trusted source for your entire hardware range, manufactured to ISO 9001 standards.",
+    text: "Polished gold to brushed stainless steel — one trusted source for your entire hardware range, manufactured to exacting quality standards.",
   },
   {
     image: "/img/img4.jpg",

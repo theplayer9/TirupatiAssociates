@@ -152,9 +152,7 @@ export default function Footer() {
             </h4>
             <ul style={{ listStyle: "none" }}>
               {[
-                ["ISO 9001:2015", "/quality#certifications"],
                 ["Testing & QC", "/quality#testing"],
-                ["Certifications", "/quality#certifications"],
                 ["Manufacturing", "/quality#manufacturing"],
               ].map(([label, href]) => (
                 <li key={label} style={{ marginBottom: "8px" }}>
@@ -252,7 +250,7 @@ export default function Footer() {
         >
           <span>© {new Date().getFullYear()} Tirupati Associates. All rights reserved.</span>
           <div style={{ display: "flex", gap: "10px" }}>
-            {["ISO 9001", "DGFT", "Made in India 🇮🇳"].map((b) => (
+            {["Manufacturer & Exporter", "Aligarh, India", "Made in India 🇮🇳"].map((b) => (
               <span
                 key={b}
                 style={{

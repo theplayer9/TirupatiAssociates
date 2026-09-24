@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Beaker, RotateCw, Ruler, FlaskConical, Search, PackageCheck, Check } from "lucide-react";
+import { Beaker, RotateCw, Ruler, FlaskConical, Search, PackageCheck } from "lucide-react";
 
 const BRAND = "Tirupati Associates";
 
 export const metadata: Metadata = {
-  title: "Quality Control — ISO 9001 Certified Hinge Manufacturing",
+  title: "Quality Control — Precision Hardware Manufacturing",
   description:
-    "Tirupati Associates operates a rigorous ISO 9001:2015 quality management system — salt spray testing, load cycle testing, and CMM dimensional verification on every batch of door hinges manufactured in Aligarh, India.",
+    "Tirupati Associates operates a rigorous in-house quality control process — salt spray testing, load cycle testing, and CMM dimensional verification on every batch of door hinges manufactured in Aligarh, India.",
   keywords:
-    "ISO 9001 hinge manufacturer, salt spray tested hinges, BIS certified hinges, hinge quality control India, hinge testing standards",
+    "quality hardware manufacturer India, salt spray tested hinges, quality tested door hardware, hinge quality control India, hinge testing standards",
   alternates: { canonical: "/quality" },
   openGraph: {
-    title: `Quality Control — ISO 9001 Certified Hinge Manufacturing | ${BRAND}`,
+    title: `Quality Control — Precision Hardware Manufacturing | ${BRAND}`,
     description:
-      "Rigorous quality control at every stage — from raw material inspection to pre-shipment checks. ISO 9001:2015 certified.",
+      "Rigorous quality control at every stage — from raw material inspection to pre-shipment checks.",
     url: "/quality",
     images: [{ url: "/img/img4.jpg", width: 1200, height: 630, alt: "Tirupati Associates quality-tested brass hinge" }],
   },
@@ -28,13 +28,6 @@ const testing = [
   { icon: FlaskConical, title: "Hardness & Material Testing", desc: "Incoming raw material (SS 304, SS 316, brass, zinc alloy) is verified for grade and hardness before it enters production." },
   { icon: Search, title: "Visual & Finish Inspection", desc: "Every finish — polished, brushed, PVD, powder-coated — is inspected for consistency, scratches, and plating adhesion." },
   { icon: PackageCheck, title: "Pre-Shipment Inspection", desc: "Before any export order is packed, a final QC pass checks quantity, labeling, and packaging integrity — with photo/video proof provided to the buyer." },
-];
-
-const certifications = [
-  { cert: "ISO 9001:2015", body: "Bureau Veritas", scope: "Design & Manufacture of Door Hinges" },
-  { cert: "BIS Certified", body: "Bureau of Indian Standards", scope: "IS 1341 — Steel Butt Hinges" },
-  { cert: "BS EN 1935", body: "FIRA International", scope: "Grade 11 — Building Hardware" },
-  { cert: "DGFT IEC", body: "Directorate General of Foreign Trade", scope: "Export Import Code, India" },
 ];
 
 export default function QualityPage() {
@@ -62,39 +55,25 @@ export default function QualityPage() {
             <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>Quality Assurance
           </div>
           <h1 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(52px, 8vw, 96px)", fontWeight:800, textTransform:"uppercase", color:"#ffffff", lineHeight:0.92, marginBottom:"20px" }}>Built on<br/><span style={{ color:"#e8a020" }}>Quality</span></h1>
-          <p style={{ fontSize:"18px", color:"rgba(255,255,255,0.65)", maxWidth:"560px", lineHeight:"1.7" }}>ISO 9001:2015 certified. Every hinge that leaves our Aligarh facility passes a rigorous, documented quality control process.</p>
+          <p style={{ fontSize:"18px", color:"rgba(255,255,255,0.65)", maxWidth:"560px", lineHeight:"1.7" }}>Every product that leaves our Aligarh facility passes a rigorous, documented quality control process.</p>
         </div>
       </section>
 
       {/* INTRO */}
       <section style={{ background:"#ffffff", padding:"96px 0" }}>
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px" }}>
-          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"80px", alignItems:"center" }} className="intro-grid">
+          <div style={{ maxWidth:"820px" }} className="intro-grid">
             <div>
               <div style={{ display:"flex", alignItems:"center", gap:"12px", fontSize:"12px", fontWeight:600, letterSpacing:"0.2em", textTransform:"uppercase", color:"#e8a020", marginBottom:"16px" }}>
                 <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>Our Standard
               </div>
-              <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(30px, 3.5vw, 48px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", lineHeight:1.1, marginBottom:"20px" }}>ISO 9001:2015<br/>CERTIFIED</h2>
+              <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(30px, 3.5vw, 48px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", lineHeight:1.1, marginBottom:"20px" }}>QUALITY IN<br/>EVERY PIECE</h2>
               <p style={{ fontSize:"16px", color:"#555", lineHeight:"1.8", marginBottom:"20px" }}>
-                Quality is not an afterthought at {BRAND} — it&apos;s engineered into every step of our process. From incoming raw material inspection to final pre-shipment checks, we operate a rigorous quality management system certified to ISO 9001:2015.
+                Quality is not an afterthought at {BRAND} — it&apos;s engineered into every step of our process. From incoming raw material inspection to final pre-shipment checks, we follow a rigorous, documented quality control process.
               </p>
               <p style={{ fontSize:"16px", color:"#555", lineHeight:"1.8" }}>
                 Whether it&apos;s SS 304, SS 316, brass, or zinc alloy hinges, we guarantee consistent quality and flawless performance in every piece. Defective or subpar products never leave our facility — ensuring our clients receive only the best.
               </p>
-            </div>
-            <div style={{ display:"flex", flexDirection:"column", gap:"12px" }} id="certifications">
-              {certifications.map((c)=>(
-                <div key={c.cert} style={{ background:"#f7f6f3", border:"1px solid #e5e2db", borderRadius:"4px", padding:"18px 20px", display:"flex", gap:"16px", alignItems:"center", boxShadow:"var(--shadow-sm)" }}>
-                  <div style={{ width:"44px", height:"44px", background:"rgba(232,160,32,0.1)", border:"1px solid rgba(232,160,32,0.25)", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
-                    <Check size={18} color="#e8a020" strokeWidth={2.5} />
-                  </div>
-                  <div>
-                    <div style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"15px", fontWeight:700, color:"#1a1a1a", textTransform:"uppercase", letterSpacing:"0.04em" }}>{c.cert}</div>
-                    <div style={{ fontSize:"12px", color:"#e8a020", marginBottom:"2px" }}>{c.body}</div>
-                    <div style={{ fontSize:"12px", color:"#777" }}>{c.scope}</div>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -147,8 +126,8 @@ export default function QualityPage() {
       <section style={{ background:"#e8a020", padding:"80px 0" }}>
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px", display:"flex", alignItems:"center", justifyContent:"space-between", gap:"40px", flexWrap:"wrap" }}>
           <div>
-            <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(28px, 4vw, 48px)", fontWeight:800, textTransform:"uppercase", color:"#fff", marginBottom:"8px" }}>REQUEST TEST REPORTS</h2>
-            <p style={{ fontSize:"16px", color:"rgba(255,255,255,0.8)" }}>Ask for salt spray and load cycle test certificates with your next quote.</p>
+            <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(28px, 4vw, 48px)", fontWeight:800, textTransform:"uppercase", color:"#fff", marginBottom:"8px" }}>REQUEST QUALITY DETAILS</h2>
+            <p style={{ fontSize:"16px", color:"rgba(255,255,255,0.8)" }}>Ask for our quality check and inspection details with your next quote.</p>
           </div>
           <Link href="/contact" style={{ background:"#1a1a1a", color:"#fff", padding:"14px 32px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"14px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", textDecoration:"none", borderRadius:"2px" }}>Get in Touch ›</Link>
         </div>

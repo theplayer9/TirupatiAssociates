@@ -6,34 +6,32 @@ import { Settings, Wrench, Sparkles, Microscope, Package, Ship } from "lucide-re
 const BRAND = "Tirupati Associates";
 
 export const metadata: Metadata = {
-  title: "About Us — Door Hinge Manufacturer Since 2010",
+  title: "About Us — Architectural Hardware Manufacturer Since 2013",
   description:
-    "Tirupati Associates has manufactured premium door hinges from Aligarh, India since 2010. ISO 9001 certified, 40,000 sq ft facility, exporting to 40+ countries.",
-  keywords: "about Tirupati Associates, hinge manufacturer Aligarh, hardware factory India, ISO 9001 hinge manufacturer",
+    "Tirupati Associates has manufactured premium architectural hardware in Aligarh, India since 2013 — supplying hinges, locks, handles, bolts and fittings to exporters, distributors and wholesalers.",
+  keywords: "about Tirupati Associates, hinge manufacturer Aligarh, hardware factory India, architectural hardware manufacturer India",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: `About Us — Door Hinge Manufacturer Since 2010 | ${BRAND}`,
-    description: "16+ years of precision hinge manufacturing from Aligarh, India — the hardware capital of the world.",
+    title: `About Us — Architectural Hardware Manufacturer Since 2013 | ${BRAND}`,
+    description: "13+ years of precision hardware manufacturing from Aligarh, India — trusted by exporters and distributors.",
     url: "/about",
     images: [{ url: "/img/door-lifestyle.jpg", width: 1200, height: 630, alt: "Tirupati Associates facility" }],
   },
 };
 
 const timeline = [
-  { year: "2010", event: "Founded in Aligarh by the Gupta family. Started with butt hinge production for the domestic market." },
-  { year: "2012", event: "Expanded facility to 15,000 sq ft. Added heavy-duty and piano hinge production lines." },
-  { year: "2014", event: "First international export to UAE. Established relationships with Dubai hardware distributors." },
-  { year: "2017", event: "ISO 9001 certification achieved. Entered South African and East African markets." },
-  { year: "2020", event: "Launched OEM / private-label division. Started supplying to Vietnam furniture manufacturers." },
-  { year: "2023", event: "Expanded to 40,000 sq ft modern plant with advanced CNC and surface treatment lines." },
-  { year: "2025", event: "Exporting to 40+ countries across Middle East, Africa, Southeast Asia, and Europe." },
+  { year: "2013", event: "Tirupati Associates is established in Aligarh, manufacturing butt hinges and essential door fittings for the hardware trade." },
+  { year: "2015", event: "Hinge range grows to include bearing, flush and specialist hinges, alongside tower bolts and pad bolts." },
+  { year: "2017", event: "Locks and tubular latches join the line-up, backed by stronger in-house quality checks at every stage." },
+  { year: "2019", event: "Begins supplying exporters and distributors, taking Tirupati hardware to overseas markets through trusted trade partners." },
+  { year: "2021", event: "Adds door handles, cabinet hardware and decorative hooks in brass, zinc, stainless steel and cast iron." },
+  { year: "2023", event: "Scales up production and finishing capacity to handle larger bulk orders for exporters and distributors." },
+  { year: "2026", event: "Presents a complete 10-category catalogue of architectural hardware, from hinges and locks to gate latches." },
 ];
 
 const team = [
-  { name: "Rajesh Gupta", role: "Managing Director", desc: "30+ years in hardware manufacturing. Leads business development and international partnerships." },
-  { name: "Priya Gupta", role: "Director – Operations", desc: "Oversees production, quality control, and supply chain management across all product lines." },
-  { name: "Amit Sharma", role: "Export Manager", desc: "Manages international accounts across UAE, South Africa, Vietnam, and 40+ export markets." },
-  { name: "Vikram Singh", role: "Quality Head", desc: "ISO 9001 lead auditor. Ensures every batch meets international standards before dispatch." },
+  { name: "Sanjeev Sharma", role: "Managing Director", desc: "25+ years of manufacturing experience. Leads the company's direction, product development and long-term partnerships with exporters and distributors." },
+  { name: "Om Sharma", role: "Director – Operations", desc: "Oversees production, quality control and supply chain across all product lines, ensuring every order is delivered on time and to specification." },
 ];
 
 const manufacturing = [
@@ -42,7 +40,7 @@ const manufacturing = [
   { icon: Sparkles, title: "Surface Treatment", desc: "In-house electroplating, powder coating, and PVD finishing. SS passivation for marine-grade products." },
   { icon: Microscope, title: "Quality Lab", desc: "Salt spray test chamber (1000hr), load cycle tester, hardness tester, and CMM for dimensional checks." },
   { icon: Package, title: "Packaging", desc: "Auto-packing lines for retail, bulk, and OEM packaging. Custom branded boxes and cartons available." },
-  { icon: Ship, title: "Export Logistics", desc: "In-house export documentation. Tie-up with top freight forwarders for FCL/LCL from JNPT & Mundra." },
+  { icon: Ship, title: "Partner Supply", desc: "Export-ready packing, bulk dispatch and consistent lead times for exporters and distributors, with support for their documentation needs." },
 ];
 
 export default function AboutPage() {
@@ -59,7 +57,7 @@ export default function AboutPage() {
             <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>Our Story
           </div>
           <h1 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(52px, 8vw, 96px)", fontWeight:800, textTransform:"uppercase", color:"#ffffff", lineHeight:0.92, marginBottom:"20px" }}>About Tirupati<br/><span style={{ color:"#e8a020" }}>Associates</span></h1>
-          <p style={{ fontSize:"18px", color:"rgba(255,255,255,0.65)", maxWidth:"560px", lineHeight:"1.7" }}>16+ years of precision hinge manufacturing from the hardware capital of India — Aligarh, Uttar Pradesh.</p>
+          <p style={{ fontSize:"18px", color:"rgba(255,255,255,0.65)", maxWidth:"560px", lineHeight:"1.7" }}>13+ years of precision hardware manufacturing from the hardware capital of India — Aligarh, Uttar Pradesh.</p>
         </div>
       </section>
 
@@ -69,30 +67,30 @@ export default function AboutPage() {
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"80px", alignItems:"center" }} className="story-grid">
             <div>
               <div style={{ display:"flex", alignItems:"center", gap:"12px", fontSize:"12px", fontWeight:600, letterSpacing:"0.2em", textTransform:"uppercase", color:"#e8a020", marginBottom:"16px" }}>
-                <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>Est. 2010
+                <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>Est. 2013
               </div>
               <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(32px, 4vw, 52px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", lineHeight:1.1, marginBottom:"24px" }}>
-                16+ YEARS OF <span style={{ color:"#e8a020" }}>CRAFTSMANSHIP</span>
+                13+ YEARS OF <span style={{ color:"#e8a020" }}>CRAFTSMANSHIP</span>
               </h2>
               <p style={{ fontSize:"16px", color:"#555", lineHeight:"1.8", marginBottom:"20px" }}>
-                {BRAND} was founded in 2010 in Aligarh — a city that accounts for over 80% of India&apos;s hardware manufacturing output. What started as a small family business supplying hinges to local markets has grown into a leading export house serving 40+ countries.
+                {BRAND} was established in 2013 in Aligarh — India&apos;s best-known centre for hardware manufacturing. What began as a focused hinge manufacturing unit has grown into a complete architectural hardware maker, trusted by exporters and distributors who take our products to markets across India and overseas.
               </p>
               <p style={{ fontSize:"16px", color:"#555", lineHeight:"1.8", marginBottom:"20px" }}>
-                Our manufacturing philosophy has always been simple: build every hinge as if our reputation depends on it — because it does. Every product that leaves our factory carries the legacy of Aligarh&apos;s craftsmanship and the trust of our global customers.
+                Our manufacturing philosophy has always been simple: build every hinge as if our reputation depends on it — because it does. Every product that leaves our factory carries the legacy of Aligarh&apos;s craftsmanship and the trust of the partners who sell it.
               </p>
               <p style={{ fontSize:"16px", color:"#555", lineHeight:"1.8" }}>
-                Today, {BRAND} operates a 40,000 sq ft state-of-the-art facility with 150+ skilled employees, serving builders, contractors, furniture manufacturers, and hardware distributors across the Middle East, Africa, and Southeast Asia.
+                Today, {BRAND} manufactures hinges, locks, door handles, brackets, hooks, cabinet hardware, pad and tower bolts, cabin hooks and gate latches. We work as the manufacturing partner behind exporters, distributors, wholesalers and hardware dealers — handling production, finishing and packing so they can serve builders, contractors and furniture makers with confidence.
               </p>
             </div>
             <div>
               <div style={{ background:"#f7f6f3", border:"1px solid #e5e2db", borderRadius:"6px", padding:"48px", position:"relative", overflow:"hidden", boxShadow:"var(--shadow)" }}>
-                <div style={{ position:"absolute", top:"20px", right:"20px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"120px", fontWeight:800, color:"rgba(232,160,32,0.06)", lineHeight:1, pointerEvents:"none" }}>16</div>
+                <div style={{ position:"absolute", top:"20px", right:"20px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"120px", fontWeight:800, color:"rgba(232,160,32,0.06)", lineHeight:1, pointerEvents:"none" }}>13</div>
                 <div style={{ position:"relative", zIndex:1 }}>
                   {[
-                    { n:"40,000", l:"Sq Ft Factory" },
-                    { n:"150+", l:"Employees" },
-                    { n:"500+", l:"Product SKUs" },
-                    { n:"40+", l:"Export Countries" },
+                    { n:"2013", l:"Established" },
+                    { n:"13+", l:"Years of Manufacturing" },
+                    { n:"10", l:"Product Categories" },
+                    { n:"110+", l:"Catalogue Products" },
                   ].map((s)=>(
                     <div key={s.l} style={{ display:"flex", alignItems:"center", gap:"20px", padding:"20px 0", borderBottom:"1px solid #e5e2db" }}>
                       <div style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"40px", fontWeight:800, color:"#e8a020", lineHeight:1, minWidth:"100px" }}>{s.n}</div>
@@ -112,7 +110,7 @@ export default function AboutPage() {
           <div style={{ display:"flex", alignItems:"center", gap:"12px", fontSize:"12px", fontWeight:600, letterSpacing:"0.2em", textTransform:"uppercase", color:"#e8a020", marginBottom:"12px" }}>
             <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>Our Journey
           </div>
-          <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(32px, 4vw, 52px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", marginBottom:"56px" }}>16 Years of Growth</h2>
+          <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(32px, 4vw, 52px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", marginBottom:"56px" }}>Our Growth Since 2013</h2>
           <div style={{ position:"relative", paddingLeft:"40px", borderLeft:"2px solid #e5e2db" }}>
             {timeline.map((t, i)=>(
               <div key={t.year} style={{ position:"relative", marginBottom: i < timeline.length - 1 ? "40px" : "0" }}>
@@ -153,7 +151,7 @@ export default function AboutPage() {
             <div style={{ display:"flex", alignItems:"center", gap:"12px", fontSize:"12px", fontWeight:600, letterSpacing:"0.2em", textTransform:"uppercase", color:"#e8a020", marginBottom:"16px" }}>
               <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>Quality Assurance
             </div>
-            <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(30px, 3.5vw, 48px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", lineHeight:1.1, marginBottom:"20px" }}>ISO 9001:2015 CERTIFIED</h2>
+            <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(30px, 3.5vw, 48px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", lineHeight:1.1, marginBottom:"20px" }}>QUALITY IN EVERY PIECE</h2>
             <p style={{ fontSize:"16px", color:"#555", lineHeight:"1.8" }}>
               Quality is engineered into every step of our process — from incoming raw material inspection to salt spray testing, load cycle testing, and final pre-shipment checks.
             </p>
@@ -169,7 +167,7 @@ export default function AboutPage() {
             <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>Leadership
           </div>
           <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(32px, 4vw, 52px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", marginBottom:"56px" }}>The Team Behind the Product</h2>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(4, 1fr)", gap:"20px" }} className="team-grid">
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(2, 1fr)", gap:"20px", maxWidth:"760px" }} className="team-grid">
             {team.map((t)=>(
               <div key={t.name} style={{ background:"#ffffff", border:"1px solid #e5e2db", borderRadius:"4px", padding:"28px", boxShadow:"var(--shadow-sm)" }}>
                 <div style={{ width:"56px", height:"56px", background:"rgba(232,160,32,0.1)", border:"2px solid rgba(232,160,32,0.3)", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"22px", fontWeight:800, color:"#e8a020", marginBottom:"16px" }}>
@@ -199,7 +197,6 @@ export default function AboutPage() {
         @media (max-width: 1024px) {
           .story-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
           .mfg-grid { grid-template-columns: repeat(2, 1fr) !important; }
-          .team-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
         @media (max-width: 640px) {
           .mfg-grid { grid-template-columns: 1fr !important; }

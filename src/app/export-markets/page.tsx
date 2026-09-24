@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const trustPoints = [
   { icon: Package, title: "Free Samples, No Obligation", desc: "Verify quality with your own hands before committing to a bulk order — we cover sample production and dispatch." },
   { icon: FileText, title: "Documentation Handled In-House", desc: "Commercial invoice, packing list, Certificate of Origin, Bill of Lading, and test reports — prepared before your goods ship, not after." },
-  { icon: Factory, title: "Consistent Quality, Every Order", desc: "Every export order is manufactured in the same ISO 9001-certified Aligarh facility, so your third shipment matches your first." },
+  { icon: Factory, title: "Consistent Quality, Every Order", desc: "Every export order is manufactured in the same Aligarh facility under the same quality checks, so your third shipment matches your first." },
   { icon: IndianRupee, title: "Factory-Direct Pricing", desc: "No middlemen. Our export pricing reflects our own manufacturing cost — competitive against Chinese and domestic alternatives alike." },
   { icon: Ruler, title: "Flexible MOQs", desc: "From first-time importers testing a new market to distributors placing container loads — order sizes scale with you." },
   { icon: Handshake, title: "A Dedicated Export Desk", desc: "One team, one point of contact, from your first enquiry to the Bill of Lading in your inbox." },
@@ -96,7 +96,7 @@ export default function ExportMarketsPage() {
             Craftsmanship That Reaches Every Door.
           </h2>
           <p style={{ fontSize:"16px", color:"#555", lineHeight:"1.8", maxWidth:"960px", marginLeft:"auto", marginRight:"auto", marginBottom:"18px", textAlign:"center" }}>
-            Every hinge we manufacture starts in the same ISO 9001-certified Aligarh facility and ends up somewhere new — from Gulf megaprojects to Vietnamese furniture workshops, North American hardware distributors to East African construction sites.
+            Every hinge we manufacture starts in the same in-house Aligarh facility and ends up somewhere new — from Gulf megaprojects to Vietnamese furniture workshops, North American hardware distributors to East African construction sites.
           </p>
           <p style={{ fontSize:"16px", color:"#555", lineHeight:"1.8", maxWidth:"960px", marginLeft:"auto", marginRight:"auto", marginBottom:"18px", textAlign:"center" }}>
             {BRAND} has spent 16+ years perfecting a single craft: manufacturing door hardware that performs the same way on day one as it does after a decade of daily use. Every batch is salt-spray tested, load-cycle tested, and dimensionally verified before it ever reaches a shipping container — because a hinge that fails halfway across the world isn&apos;t a hinge we&apos;re willing to put our name on.

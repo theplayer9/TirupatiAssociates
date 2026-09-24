@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: `%s | ${BRAND}`,
   },
   description:
-    "Leading door hinge manufacturer and exporter from Aligarh, India. Supplying premium quality butt hinges, ball bearing hinges, concealed hinges and heavy-duty hardware to UAE, South Africa, Vietnam and 40+ global markets. ISO 9001 certified.",
+    "Leading door hinge manufacturer and exporter from Aligarh, India. Supplying premium quality butt hinges, ball bearing hinges, concealed hinges and heavy-duty hardware to UAE, South Africa, Vietnam and 40+ global markets. Strict in-house quality control on every batch.",
   keywords:
     "door hinge manufacturer India, Aligarh hinge exporter, heavy duty hinges UAE, door hinges South Africa, hinge supplier Vietnam, Tirupati Associates, SS hinge manufacturer India, butt hinge exporter",
   authors: [{ name: BRAND }],
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: `${BRAND} — Premium Door Hinge Manufacturer | Aligarh, India`,
     description:
-      "Door hinge manufacturer and exporter from Aligarh, India, serving 40+ countries. ISO 9001 certified. Butt hinges, ball bearing hinges, concealed hinges, heavy-duty hardware and custom OEM manufacturing.",
+      "Door hinge manufacturer and exporter from Aligarh, India, serving 40+ countries. Strict in-house quality control on every batch. Butt hinges, ball bearing hinges, concealed hinges, heavy-duty hardware and custom OEM manufacturing.",
     images: [{ url: "/img/img3.jpg", width: 1200, height: 630, alt: `${BRAND} — architectural hardware for every space` }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${BRAND} — Premium Door Hinge Manufacturer | Aligarh, India`,
     description:
-      "Door hinge manufacturer and exporter from Aligarh, India, serving 40+ countries. ISO 9001 certified.",
+      "Door hinge manufacturer and exporter from Aligarh, India, serving 40+ countries. Strict in-house quality control on every batch.",
     images: ["/img/img3.jpg"],
   },
   icons: {

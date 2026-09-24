@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Factory, BadgeCheck, Ship, Zap, ShieldCheck, Settings, Palette, IndianRupee, Globe2, Check } from "lucide-react";
+import { Factory, BadgeCheck, Ship, Zap, ShieldCheck, Settings, Palette, IndianRupee, Globe2 } from "lucide-react";
 import HeroSlider from "./HeroSlider";
 import imgHinges from "@/img/Hinges.png";
 import imgLocks from "@/img/Locks.png";
@@ -36,16 +36,9 @@ const products = [
 
 const whyPoints = [
   { icon: Factory, title: "In-House Manufacturing", desc: "Full control from raw material to finished product. Direct factory pricing for bulk orders." },
-  { icon: BadgeCheck, title: "ISO 9001 Certified",      desc: "Rigorous QC at every stage. Products meet BS, DIN, and ANSI international standards." },
+  { icon: BadgeCheck, title: "Strict Quality Control",  desc: "Rigorous checks at every stage — from raw material to final packing — for consistent quality in every batch." },
   { icon: Ship, title: "Export-Ready Packaging", desc: "Carton, bulk, and branded packaging. We handle customs documentation for smooth clearance." },
   { icon: Zap, title: "Fast Turnaround",         desc: "Standard orders: 15–20 days. Repeat orders: 7–10 days. Air freight for urgent needs." },
-];
-
-const certs = [
-  { title: "ISO 9001:2015", sub: "Quality Management" },
-  { title: "BIS Certified",  sub: "Bureau of Indian Standards" },
-  { title: "BS EN 1935",     sub: "European Hinge Standard" },
-  { title: "DGFT Registered",sub: "Export License, India" },
 ];
 
 const tickerItems = ["Butt Hinges","Ball Bearing Hinges","Concealed Hinges","Heavy Duty Hinges","Tubular Latches","Cupboard Hinges","Spring Hinges","Continuous Hinges","Custom OEM Hinges","Stainless Steel Hardware","Export Grade Quality"];
@@ -332,26 +325,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ── CERTIFICATIONS ── */}
-      <div style={{ background:"#f7f6f3", padding:"44px 0", borderTop:"1px solid #e5e2db", borderBottom:"1px solid #e5e2db" }}>
-        <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px", display:"flex", alignItems:"center", justifyContent:"space-between", gap:"28px", flexWrap:"wrap" }}>
-          <span style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"12px", fontWeight:700, letterSpacing:"0.18em", color:"#aaa", textTransform:"uppercase", whiteSpace:"nowrap" }}>Certifications & Standards</span>
-          <div style={{ display:"flex", gap:"10px", flexWrap:"wrap" }}>
-            {certs.map((c)=>(
-              <div key={c.title} style={{ padding:"12px 18px", border:"1px solid #e5e2db", borderRadius:"4px", display:"flex", alignItems:"center", gap:"10px", background:"#fff", boxShadow:"0 1px 4px rgba(0,0,0,0.05)" }}>
-                <div style={{ width:"26px", height:"26px", background:"#e8a020", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
-                  <Check size={14} color="#fff" strokeWidth={3} />
-                </div>
-                <div>
-                  <div style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"13px", fontWeight:700, letterSpacing:"0.04em", color:"#1a1a1a", textTransform:"uppercase" }}>{c.title}</div>
-                  <div style={{ fontSize:"10px", color:"#999" }}>{c.sub}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* ── CTA ── */}
       <section style={{ background:"#e8a020", padding:"88px 0" }}>
