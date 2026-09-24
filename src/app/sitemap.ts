@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
-import { products } from "./products/data";
+import { allItems } from "./products/catalog";
 import { posts } from "./blog/data";
 
 const BASE_URL = "https://www.tirupatiassociates.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ["", "/products", "/export-markets", "/quality", "/blog", "/about", "/contact"];
-  const productRoutes = products.map((p) => `/products/${p.id}`);
+  const productRoutes = allItems.map((p) => `/products/${p.slug}`);
   const blogRoutes = posts.map((p) => `/blog/${p.slug}`);
 
   return [...staticRoutes, ...productRoutes, ...blogRoutes].map((route) => ({

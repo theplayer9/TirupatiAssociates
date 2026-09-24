@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { products } from "./data";
+import { Suspense } from "react";
+import ProductCatalog from "./ProductCatalog";
 
 const BRAND = "Tirupati Associates";
 
 export const metadata: Metadata = {
-  title: "Door Hinges & Hardware Manufacturer — Full Product Range",
+  title: "Architectural Hardware Manufacturer — Full Product Range",
   description:
-    "Browse the full Tirupati Associates product range: butt hinges, heavy duty hinges, concealed cabinet hinges, piano hinges, spring hinges, tubular latches, ball bearing hinges, cupboard hinges and custom OEM manufacturing. Manufactured in Aligarh, India and export-ready worldwide.",
+    "Browse the full Tirupati Associates catalogue: hinges, locks, door handles, brackets, hooks, cabinet hardware, pad / brenton bolts, tower bolts, cabin hooks and gate latches. Manufactured in Aligarh, India and export-ready worldwide.",
   keywords:
-    "door hinge manufacturer India, butt hinges, ball bearing hinges, concealed hinges, heavy duty hinges, piano hinges, tubular latches, cupboard hinges, custom OEM hinges Aligarh",
+    "architectural hardware manufacturer India, door hinges, mortise locks, tubular latches, door handles, brackets, hooks, cabinet hardware, pad bolts, tower bolts, cabin hooks, gate latches Aligarh",
   alternates: { canonical: "/products" },
   openGraph: {
-    title: `Door Hinges & Hardware Manufacturer — Full Product Range | ${BRAND}`,
+    title: `Architectural Hardware Manufacturer — Full Product Range | ${BRAND}`,
     description:
-      "500+ hinge variants across 9 product families. Manufactured in-house in Aligarh, India to international quality standards.",
+      "10 product categories of architectural hardware. Manufactured in-house in Aligarh, India to international quality standards.",
     url: "/products",
     images: [{ url: "/img/hinge-pile.jpg", width: 1200, height: 630, alt: "Precision-manufactured door hinges" }],
   },
@@ -45,41 +46,15 @@ export default function ProductsPage() {
           <div style={{ display:"flex", alignItems:"center", gap:"12px", fontSize:"11px", fontWeight:700, letterSpacing:"0.22em", textTransform:"uppercase", color:"#e8a020", marginBottom:"20px" }}>
             <span style={{ display:"block", width:"32px", height:"2px", background:"#e8a020" }}/>Product Catalog
           </div>
-          <h1 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(52px, 8vw, 96px)", fontWeight:800, textTransform:"uppercase", color:"#ffffff", lineHeight:0.92, marginBottom:"20px" }}>Our Hinge<br/><span style={{ color:"#e8a020" }}>Range</span></h1>
-          <p style={{ fontSize:"18px", color:"rgba(255,255,255,0.65)", maxWidth:"560px", lineHeight:"1.7" }}>500+ variants across 9 product families, manufactured in-house at our Aligarh facility by {BRAND} to international quality standards.</p>
+          <h1 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(52px, 8vw, 96px)", fontWeight:800, textTransform:"uppercase", color:"#ffffff", lineHeight:0.92, marginBottom:"20px" }}>Our Product<br/><span style={{ color:"#e8a020" }}>Range</span></h1>
+          <p style={{ fontSize:"18px", color:"rgba(255,255,255,0.65)", maxWidth:"560px", lineHeight:"1.7" }}>Product categories of architectural hardware, manufactured in-house at our Aligarh facility by {BRAND} to international quality standards.</p>
         </div>
       </section>
 
-      {/* PRODUCT GRID */}
-      <section style={{ background:"#ffffff", padding:"80px 0" }}>
-        <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px" }}>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"20px" }} className="products-grid">
-            {products.map((p) => (
-              <Link
-                key={p.id}
-                href={`/products/${p.id}`}
-                style={{ textDecoration:"none", display:"block", background:"#f7f6f3", borderRadius:"6px", overflow:"hidden", border:"1px solid #ece9e2" }}
-                className="product-card"
-              >
-                <div style={{ height:"180px", background:"#ffffff", borderBottom:"1px solid #ece9e2", display:"flex", alignItems:"center", justifyContent:"center", padding:"20px" }}>
-                  {p.svg}
-                </div>
-                <div style={{ padding:"24px 24px 28px" }}>
-                  <div style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"11px", fontWeight:700, letterSpacing:"0.15em", color:"#bbb", textTransform:"uppercase", marginBottom:"8px" }}>{p.num}</div>
-                  <div style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"20px", fontWeight:800, letterSpacing:"0.03em", color:"#1a1a1a", textTransform:"uppercase", marginBottom:"10px", lineHeight:1.1 }}>{p.name}</div>
-                  <p style={{ fontSize:"13px", color:"#666", lineHeight:"1.65", marginBottom:"16px" }}>{p.tagline}</p>
-                  <div style={{ display:"flex", gap:"5px", flexWrap:"wrap" }}>
-                    {p.variants.slice(0,3).map((v)=>(
-                      <span key={v} style={{ padding:"3px 9px", background:"rgba(232,160,32,0.09)", border:"1px solid rgba(232,160,32,0.22)", fontSize:"10px", fontWeight:700, letterSpacing:"0.1em", color:"#c8880a", textTransform:"uppercase", borderRadius:"2px" }}>{v}</span>
-                    ))}
-                  </div>
-                  <div style={{ marginTop:"18px", fontSize:"12px", fontWeight:700, letterSpacing:"0.1em", color:"#e8a020", textTransform:"uppercase" }}>View Specifications →</div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* CATEGORY TABS + ITEM CARDS */}
+      <Suspense fallback={null}>
+        <ProductCatalog />
+      </Suspense>
 
       {/* CTA */}
       <section style={{ background:"#e8a020", padding:"80px 0" }}>
@@ -92,15 +67,6 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <style>{`
-        .product-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-color: #e8a020; transform: translateY(-2px); transition: all 0.2s; }
-        @media (max-width: 1024px) {
-          .products-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-        @media (max-width: 640px) {
-          .products-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </>
   );
 }

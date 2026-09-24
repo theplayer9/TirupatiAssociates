@@ -22,16 +22,16 @@ const stats = [
 ];
 
 const products = [
-  { num: "01", name: "Hinges",              img: imgHinges,     desc: "Butt, parliament and heavy-duty door hinges in brass, stainless and mild steel. Precision-machined knuckles for smooth, low-play rotation under load." },
-  { num: "02", name: "Locks",               img: imgLocks,      desc: "Mortise lock bodies and sashlocks with lever and cylinder operation. Hardened steel bolts, plated cases and matched strike plates." },
-  { num: "03", name: "Door Handles",        img: imgHandles,    desc: "Lever-on-plate handles in brass, zinc alloy and antique finishes. Sprung mechanism for positive lever return." },
-  { num: "04", name: "Brackets",            img: imgBrackets,   desc: "Load-bearing shelf and support brackets in brass and steel. Gusseted profile resists deflection under static load." },
-  { num: "05", name: "Hooks",               img: imgHooks,      desc: "Single and double robe and coat hooks in brass, black iron and ceramic-knob designs. Pre-drilled for direct screw fixing." },
-  { num: "06", name: "Cabinets",            img: imgCabinets,   desc: "Cabinet knobs, pull handles and flush ring pulls in cast brass and ceramic. Threaded fixings for secure panel mounting." },
-  { num: "07", name: "Pad / Brenton Bolts", img: imgPadBolts,   desc: "Zinc-plated steel pad bolts with padlock staple for surface-mounted doors and gates. Solid round shoot in a pressed-steel guide." },
-  { num: "08", name: "Tower Bolts",         img: imgTowerBolts, desc: "Surface-mounted tower bolts in black powder-coated and zinc-plated steel. Cranked handle, round shoot and matching keep." },
-  { num: "09", name: "Cabin Hooks",         img: imgCabinHooks, desc: "Hook-and-eye cabin hooks in polished brass and black cast iron. Hold doors, windows and shutters open at a fixed position." },
-  { num: "10", name: "Gate Latch",          img: imgGateLatch,  desc: "Ring-handle and bar gate latches in black iron and satin steel. Gravity-drop bar and keep for positive self-latching." },
+  { num: "01", slug: "hinges", name: "Hinges",              img: imgHinges,     desc: "Butt, parliament and heavy-duty door hinges in brass, stainless and mild steel. Precision-machined knuckles for smooth, low-play rotation under load." },
+  { num: "02", slug: "locks", name: "Locks",               img: imgLocks,      desc: "Mortise lock bodies and sashlocks with lever and cylinder operation. Hardened steel bolts, plated cases and matched strike plates." },
+  { num: "03", slug: "door-handles", name: "Door Handles",        img: imgHandles,    desc: "Lever-on-plate handles in brass, zinc alloy and antique finishes. Sprung mechanism for positive lever return." },
+  { num: "04", slug: "brackets", name: "Brackets",            img: imgBrackets,   desc: "Load-bearing shelf and support brackets in brass and steel. Gusseted profile resists deflection under static load." },
+  { num: "05", slug: "hooks", name: "Hooks",               img: imgHooks,      desc: "Single and double robe and coat hooks in brass, black iron and ceramic-knob designs. Pre-drilled for direct screw fixing." },
+  { num: "06", slug: "cabinets", name: "Cabinets",            img: imgCabinets,   desc: "Cabinet knobs, pull handles and flush ring pulls in cast brass and ceramic. Threaded fixings for secure panel mounting." },
+  { num: "07", slug: "pad-brenton-bolts", name: "Pad / Brenton Bolts", img: imgPadBolts,   desc: "Zinc-plated steel pad bolts with padlock staple for surface-mounted doors and gates. Solid round shoot in a pressed-steel guide." },
+  { num: "08", slug: "tower-bolts", name: "Tower Bolts",         img: imgTowerBolts, desc: "Surface-mounted tower bolts in black powder-coated and zinc-plated steel. Cranked handle, round shoot and matching keep." },
+  { num: "09", slug: "cabin-hooks", name: "Cabin Hooks",         img: imgCabinHooks, desc: "Hook-and-eye cabin hooks in polished brass and black cast iron. Hold doors, windows and shutters open at a fixed position." },
+  { num: "10", slug: "gate-latch", name: "Gate Latch",          img: imgGateLatch,  desc: "Ring-handle and bar gate latches in black iron and satin steel. Gravity-drop bar and keep for positive self-latching." },
 ];
 
 const whyPoints = [
@@ -156,7 +156,7 @@ export default function HomePage() {
 
           <div style={{ display:"grid", gridTemplateColumns:"repeat(5,1fr)", gap:"16px" }} className="products-grid">
             {products.map((p)=>(
-              <Link key={p.num} href="/products" style={{ textDecoration:"none", display:"block", position:"relative", background:"#f7f6f3", borderRadius:"4px", overflow:"hidden", border:"1px solid #ece9e2" }} className="product-card">
+              <Link key={p.num} href={`/products?cat=${p.slug}`} style={{ textDecoration:"none", display:"block", position:"relative", background:"#f7f6f3", borderRadius:"4px", overflow:"hidden", border:"1px solid #ece9e2" }} className="product-card">
                 <div style={{ position:"relative", width:"100%", aspectRatio:"1 / 1", overflow:"hidden", background:"#ece9e2" }}>
                   <Image
                     src={p.img}

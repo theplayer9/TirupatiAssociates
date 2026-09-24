@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/img/Logo.png";
 import { Globe2, MessageCircle, Mail } from "lucide-react";
+import { categories } from "@/app/products/catalog";
 
 export default function Footer() {
   return (
@@ -90,15 +91,7 @@ export default function Footer() {
             </h4>
             <ul style={{ listStyle: "none" }}>
               {[
-                ["Butt Hinges", "/products/butt-hinges"],
-                ["Heavy Duty Hinges", "/products/heavy-duty-hinges"],
-                ["Concealed Hinges", "/products/concealed-cabinet-hinges"],
-                ["Piano Hinges", "/products/piano-continuous-hinges"],
-                ["Spring Hinges", "/products/spring-hinges"],
-                ["Tubular Latches", "/products/tubular-latches"],
-                ["Ball Bearing Hinges", "/products/ball-bearing-hinges"],
-                ["Cupboard Hinges", "/products/cupboard-hinges"],
-                ["Custom / OEM", "/products/custom-oem-hinges"],
+                ...categories.map((c) => [c.name, `/products?cat=${c.slug}`]),
               ].map(([label, href]) => (
                 <li key={label} style={{ marginBottom: "8px" }}>
                   <Link href={href} style={{ fontSize: "13px", color: "#777", textDecoration: "none" }}>
