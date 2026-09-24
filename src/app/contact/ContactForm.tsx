@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { categories } from "../products/catalog";
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name:"", company:"", email:"", phone:"", country:"", product:"", quantity:"", message:"" });
@@ -77,7 +78,7 @@ export default function ContactForm() {
             <label style={labelStyle}>Country *</label>
             <select required name="country" value={form.country} onChange={handle} style={inputStyle}>
               <option value="">Select your country</option>
-              {["UAE","Saudi Arabia","Qatar","Kuwait","Oman","Bahrain","South Africa","Kenya","Nigeria","Ghana","Tanzania","Vietnam","Thailand","Indonesia","Malaysia","Singapore","Philippines","Other"].map(c=>(
+              {["Australia","Austria","Bahrain","Bangladesh","Brazil","Bulgaria","Canada","Chile","Colombia","Egypt","France","Germany","Ghana","India","Indonesia","Italy","Japan","Kenya","Kuwait","Malaysia","Mexico","Nepal","Netherlands","New Zealand","Nigeria","Oman","Philippines","Poland","Qatar","Russia","Saudi Arabia","Singapore","South Africa","South Korea","Sri Lanka","Tanzania","Thailand","Turkey","UAE","United Kingdom","USA","Vietnam","Other"].map(c=>(
                 <option key={c} value={c}>{c}</option>
               ))}
             </select>
@@ -88,7 +89,7 @@ export default function ContactForm() {
               <label style={labelStyle}>Product Category</label>
               <select name="product" value={form.product} onChange={handle} style={inputStyle}>
                 <option value="">Select product type</option>
-                {["Butt Hinges","Heavy Duty Hinges","Concealed / Cabinet Hinges","Piano Hinges","Spring Hinges","Tubular Latches","Ball Bearing Hinges","Cupboard Hinges","Custom / OEM Hinges","Mixed / Multiple Types"].map(p=>(
+                {categories.map((c)=>c.name).map(p=>(
                   <option key={p} value={p}>{p}</option>
                 ))}
               </select>
