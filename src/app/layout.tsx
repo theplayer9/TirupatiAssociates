@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     title: `${BRAND} — Premium Door Hinge Manufacturer | Aligarh, India`,
     description:
       "Door hinge manufacturer and exporter from Aligarh, India, serving 40+ countries. ISO 9001 certified. Butt hinges, ball bearing hinges, concealed hinges, heavy-duty hardware and custom OEM manufacturing.",
-    images: [{ url: "/img/hinge-pile.jpg", width: 1200, height: 630, alt: `${BRAND} — precision-manufactured door hinges` }],
+    images: [{ url: "/img/img3.jpg", width: 1200, height: 630, alt: `${BRAND} — architectural hardware for every space` }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${BRAND} — Premium Door Hinge Manufacturer | Aligarh, India`,
     description:
       "Door hinge manufacturer and exporter from Aligarh, India, serving 40+ countries. ISO 9001 certified.",
-    images: ["/img/hinge-pile.jpg"],
+    images: ["/img/img3.jpg"],
   },
   icons: {
     icon: "/favicon.ico",

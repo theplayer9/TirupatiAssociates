@@ -12,14 +12,14 @@ const slides = [
     text: "From residential butt hinges to industrial-grade gate hardware — precision-engineered for decades of smooth, silent operation.",
   },
   {
-    image: "/img/hinge-finishes.jpg",
-    alt: "Butt hinges in multiple finishes — gold, silver, bronze, chrome, copper",
+    image: "/img/img2.jpg",
+    alt: "Tirupati Associates handles and cabinet hardware in premium finishes",
     heading: "500+ Variants, Every Finish You Need",
     text: "Polished gold to brushed stainless steel — one trusted source for your entire hardware range, manufactured to ISO 9001 standards.",
   },
   {
-    image: "/img/hinge-installed.jpg",
-    alt: "Chrome butt hinge installed on a white door frame",
+    image: "/img/img4.jpg",
+    alt: "Tirupati Associates brass hinge and lever handle on a wooden door",
     heading: "Proudly Manufactured in Uttar Pradesh, India",
     text: "Precision hardware exported from one of India's premier hinge-manufacturing regions to builders and distributors in 40+ countries.",
   },

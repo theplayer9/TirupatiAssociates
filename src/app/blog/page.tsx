@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: `Hinge Buying Guides & Manufacturing Insights | ${BRAND}`,
     description: "Practical guides on hinge selection, materials, manufacturing, and exporting door hardware.",
     url: "/blog",
-    images: [{ url: "/img/hinge-pile.jpg", width: 1200, height: 630, alt: "Tirupati Associates blog" }],
+    images: [{ url: "/img/img3.jpg", width: 1200, height: 630, alt: "Tirupati Associates blog" }],
   },
 };
 
@@ -26,7 +26,7 @@ export default function BlogIndexPage() {
       {/* HERO */}
       <section style={{ position:"relative", paddingTop:"calc(var(--nav-h) + 96px)", paddingBottom:"80px", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0 }}>
-          <Image src="/img/hinge-pile.jpg" alt="Tirupati Associates blog — hinge buying guides" fill priority style={{ objectFit:"cover", objectPosition:"center 60%" }} />
+          <Image src="/img/img3.jpg" alt="Tirupati Associates blog — architectural hardware guides" fill priority style={{ objectFit:"cover", objectPosition:"center 60%" }} />
           <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.88) 0%, rgba(10,8,6,0.65) 55%, rgba(10,8,6,0.4) 100%)" }} />
         </div>
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px", position:"relative", zIndex:2 }}>

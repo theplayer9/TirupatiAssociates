@@ -109,8 +109,8 @@ export default function HomePage() {
             {/* Right: hinge finishes photo */}
             <div style={{ position:"relative", minHeight:"420px" }}>
               <Image
-                src="/img/hinge-finishes.jpg"
-                alt="Butt hinges in multiple finishes — gold, silver, bronze, chrome, copper"
+                src="/img/img2.jpg"
+                alt="Tirupati Associates handles and cabinet hardware in premium finishes"
                 fill
                 style={{ objectFit:"cover", objectPosition:"center" }}
               />
@@ -184,8 +184,8 @@ export default function HomePage() {
       {/* ── LIFESTYLE BANNER — hinge pile ── */}
       <section style={{ position:"relative", height:"500px", overflow:"hidden", display:"flex", alignItems:"center" }}>
         <Image
-          src="/img/hinge-pile.jpg"
-          alt="Batch of precision-manufactured brass door hinges"
+          src="/img/img3.jpg"
+          alt="Tirupati Associates hinges, handles, bolts and latches in use"
           fill
           style={{ objectFit:"cover", objectPosition:"center 40%" }}
         />

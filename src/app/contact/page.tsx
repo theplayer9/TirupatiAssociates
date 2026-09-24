@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: `Request a Quote — ${BRAND}`,
     description: "Fill in the form and our export team will respond within 24 hours with pricing and product catalogue.",
     url: "/contact",
-    images: [{ url: "/img/hinge-finishes.jpg", width: 1200, height: 630, alt: "Contact Tirupati Associates" }],
+    images: [{ url: "/img/img2.jpg", width: 1200, height: 630, alt: "Contact Tirupati Associates" }],
   },
 };
 
@@ -25,7 +25,7 @@ export default function ContactPage() {
       {/* HERO */}
       <section style={{ position:"relative", paddingTop:"calc(var(--nav-h) + 80px)", paddingBottom:"80px", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0 }}>
-          <Image src="/img/hinge-finishes.jpg" alt="Hinges in multiple finishes" fill priority style={{ objectFit:"cover", objectPosition:"center 40%" }} />
+          <Image src="/img/img2.jpg" alt="Tirupati Associates handles and cabinet hardware" fill priority style={{ objectFit:"cover", objectPosition:"center 40%" }} />
           <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.9) 0%, rgba(10,8,6,0.7) 55%, rgba(10,8,6,0.45) 100%)" }} />
         </div>
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px", position:"relative", zIndex:2 }}>

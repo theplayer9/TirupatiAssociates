@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description:
       "Rigorous quality control at every stage — from raw material inspection to pre-shipment checks. ISO 9001:2015 certified.",
     url: "/quality",
-    images: [{ url: "/img/hinge-installed.jpg", width: 1200, height: 630, alt: "Quality-tested stainless steel hinge" }],
+    images: [{ url: "/img/img4.jpg", width: 1200, height: 630, alt: "Tirupati Associates quality-tested brass hinge" }],
   },
 };
 
@@ -54,7 +54,7 @@ export default function QualityPage() {
       {/* HERO */}
       <section style={{ position:"relative", paddingTop:"calc(var(--nav-h) + 96px)", paddingBottom:"96px", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0 }}>
-          <Image src="/img/hinge-installed.jpg" alt="Quality-tested stainless steel hinge installed on a door" fill priority style={{ objectFit:"cover", objectPosition:"center" }} />
+          <Image src="/img/img4.jpg" alt="Tirupati Associates brass hinge and lever handle installed on a wooden door" fill priority style={{ objectFit:"cover", objectPosition:"center" }} />
           <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.9) 0%, rgba(10,8,6,0.65) 55%, rgba(10,8,6,0.4) 100%)" }} />
         </div>
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px", position:"relative", zIndex:2 }}>
@@ -124,7 +124,7 @@ export default function QualityPage() {
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px" }}>
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"80px", alignItems:"center" }} className="mfg-grid">
             <div style={{ position:"relative", minHeight:"400px", borderRadius:"6px", overflow:"hidden" }}>
-              <Image src="/img/hinge-finishes.jpg" alt="Hinges in multiple finishes undergoing quality inspection" fill style={{ objectFit:"cover" }} />
+              <Image src="/img/img2.jpg" alt="Tirupati Associates handles and cabinet hardware in premium finishes" fill style={{ objectFit:"cover" }} />
             </div>
             <div>
               <div style={{ display:"flex", alignItems:"center", gap:"12px", fontSize:"12px", fontWeight:600, letterSpacing:"0.2em", textTransform:"uppercase", color:"#e8a020", marginBottom:"16px" }}>

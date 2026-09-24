@@ -345,7 +345,7 @@ export const posts: BlogPost[] = [
     category: "Buying Guide",
     date: "2026-01-12",
     readTime: "6 min read",
-    coverImage: "/img/hinge-installed.jpg",
+    coverImage: "/img/img4.jpg",
     content: [
       "Choosing the wrong hinge size is one of the most common — and most expensive — mistakes in a hardware order. An undersized hinge sags under load, wears out quickly, and can void a door manufacturer's warranty. An oversized hinge wastes money and can look disproportionate on lighter doors. Getting the size right the first time saves rework, freight costs on replacement shipments, and complaints from the field.",
       "The starting point is door weight and height, not just thickness. As a general rule: doors up to 1980mm (78\") in height and under 40kg typically use 100mm (4\") butt hinges. Standard residential doors between 40–60kg move up to 100–125mm hinges, often with a ball bearing variant for smoother operation. Heavier commercial doors, fire-rated doors, or doors over 2100mm in height should move to 125–150mm hinges, and anything approaching 80kg or more should be specified with ball bearing or heavy-duty construction rather than plain bearing.",
@@ -363,7 +363,7 @@ export const posts: BlogPost[] = [
     category: "Materials",
     date: "2026-01-26",
     readTime: "5 min read",
-    coverImage: "/img/hinge-finishes.jpg",
+    coverImage: "/img/img2.jpg",
     content: [
       "SS 304 and SS 316 are both austenitic stainless steels and look nearly identical on delivery — the difference only becomes obvious after years of exposure to moisture, salt, or industrial chemicals. Choosing the wrong grade for the environment is the single most common cause of premature hinge corrosion complaints in export orders.",
       "SS 304 contains roughly 18% chromium and 8% nickel. It offers strong general corrosion resistance and is the standard choice for interior doors, dry-climate exteriors, and most residential and commercial applications. It's also more cost-effective, which is why it remains the default grade for the majority of butt hinges, cupboard hinges, and tubular latches shipped for inland projects.",
@@ -398,7 +398,7 @@ export const posts: BlogPost[] = [
     category: "Buying Guide",
     date: "2026-02-14",
     readTime: "5 min read",
-    coverImage: "/img/hinge-pile.jpg",
+    coverImage: "/img/img3.jpg",
     content: [
       "Plain bearing hinges are the simplest and most economical hinge construction — the knuckle rotates directly around the pin with no bearing surface between them. For low-to-moderate traffic doors, this is entirely adequate and has been the standard residential hinge design for generations.",
       "Ball bearing hinges insert a ring of hardened steel or stainless steel ball bearings (commonly ABEC-5 precision-grade) between the knuckle sections, so the door's weight rides on the bearings rather than directly on the pin surface. The result is dramatically reduced friction, quieter operation, and far less wear over time — but at a moderate cost premium over plain bearing construction.",
@@ -415,7 +415,7 @@ export const posts: BlogPost[] = [
     category: "Export",
     date: "2026-02-25",
     readTime: "7 min read",
-    coverImage: "/img/hinge-installed.jpg",
+    coverImage: "/img/img4.jpg",
     content: [
       "The UAE remains one of the most active hardware import markets in the world, driven by continuous construction activity across Dubai, Abu Dhabi, and the wider GCC. For hinge exporters and the importers who buy from them, three things determine whether a shipment clears smoothly and performs as expected on site: material specification, packaging, and documentation.",
       "Material specification comes first. The UAE's coastal and desert climate is uniquely demanding on hardware — high humidity, salt-laden air along the coastline, and extreme temperature swings inland. Buyers should default to SS 316 or fully passivated stainless steel for any project within reach of the coast, and confirm hinges are rated for the temperature range they'll face if installed on exterior-facing doors. Many UAE developers and fit-out contractors also expect compliance with UAE building codes and reference BS EN 1935 as a quality baseline — confirm this with your supplier before finalizing an order rather than assuming it by default.",
@@ -433,7 +433,7 @@ export const posts: BlogPost[] = [
     category: "Manufacturing",
     date: "2026-03-08",
     readTime: "6 min read",
-    coverImage: "/img/hinge-finishes.jpg",
+    coverImage: "/img/img2.jpg",
     content: [
       "Concealed cabinet hinges — the hidden cup hinges behind nearly every modern kitchen door — look simple from the outside, but involve more manufacturing steps than almost any other hinge type. Understanding the process helps buyers evaluate why quality varies so much between suppliers.",
       "It starts with the cup. The cup is cold-formed from cold-rolled steel or zinc die-cast in a multi-stage press that draws the metal into its cylindrical shape without cracking the grain structure — a process that requires precisely calibrated tooling, since even minor die wear produces cups with inconsistent wall thickness that don't seat cleanly in a pre-drilled cabinet door.",
@@ -451,7 +451,7 @@ export const posts: BlogPost[] = [
     category: "Buying Guide",
     date: "2026-03-20",
     readTime: "5 min read",
-    coverImage: "/img/hinge-pile.jpg",
+    coverImage: "/img/img3.jpg",
     content: [
       "Heavy-duty hinges — weld-on strap hinges, T-hinges, and reinforced pin hinges — exist for a reason: standard butt hinges are engineered for typical interior and residential door weights, and pushing them beyond that range leads to predictable, avoidable failures. Here are five signs a project needs to move up to heavy-duty hardware.",
       "1. The door or gate visibly sags or drags. If a gate or door has developed a downward droop at the latch side, or scrapes the frame or ground when swinging, the hinge is very likely undersized for the weight it's carrying. Standard butt hinges are typically rated up to 80kg per pair — anything heavier, especially solid wood gates, security doors, or metal-clad doors, needs hinges rated to 100kg and beyond.",

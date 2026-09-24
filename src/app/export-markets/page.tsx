@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: `Door Hinge Exporter from India — Shipping to 40+ Countries Worldwide | ${BRAND}`,
     description: "From the Gulf to the Americas — wherever there's a door, we can probably ship a hinge for it.",
     url: "/export-markets",
-    images: [{ url: "/img/hinge-installed.jpg", width: 1200, height: 630, alt: "Hinges ready for global export" }],
+    images: [{ url: "/img/img4.jpg", width: 1200, height: 630, alt: "Tirupati Associates brass hinge and door handle" }],
   },
 };
 
@@ -136,7 +136,7 @@ export default function ExportMarketsPage() {
           <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(32px, 4vw, 52px)", fontWeight:800, textTransform:"uppercase", color:"#1a1a1a", marginBottom:"56px" }}>From Enquiry to Your Port, In Six Steps</h2>
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1.3fr", gap:"40px", alignItems:"start" }} className="process-layout">
             <div style={{ position:"relative", minHeight:"460px", borderRadius:"8px", overflow:"hidden" }}>
-              <Image src="/img/hinge-pile.jpg" alt="Export-ready hinges packed and prepared for shipment" fill style={{ objectFit:"cover", objectPosition:"center 40%" }} />
+              <Image src="/img/img3.jpg" alt="Tirupati Associates hardware for doors, gates and cabinets" fill style={{ objectFit:"cover", objectPosition:"center 40%" }} />
               <div style={{ position:"absolute", inset:0, background:"linear-gradient(180deg, rgba(10,8,6,0) 40%, rgba(10,8,6,0.75) 100%)" }} />
               <div style={{ position:"absolute", bottom:"24px", left:"24px", right:"24px" }}>
                 <div style={{ fontSize:"11px", fontWeight:700, letterSpacing:"0.18em", textTransform:"uppercase", color:"#e8a020", marginBottom:"6px" }}>Every Order, Documented</div>

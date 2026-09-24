@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       "10 product categories of architectural hardware. Manufactured in-house in Aligarh, India to international quality standards.",
     url: "/products",
-    images: [{ url: "/img/hinge-pile.jpg", width: 1200, height: 630, alt: "Precision-manufactured door hinges" }],
+    images: [{ url: "/img/img3.jpg", width: 1200, height: 630, alt: "Tirupati Associates architectural hardware range" }],
   },
 };
 
@@ -39,7 +39,7 @@ export default function ProductsPage() {
       {/* PAGE HERO */}
       <section style={{ position:"relative", paddingTop:"calc(var(--nav-h) + 96px)", paddingBottom:"96px", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0 }}>
-          <Image src="/img/hinge-pile.jpg" alt="Precision-manufactured door hinges by Tirupati Associates" fill priority style={{ objectFit:"cover", objectPosition:"center 60%" }} />
+          <Image src="/img/img3.jpg" alt="Tirupati Associates hinges, handles, bolts and latches in use" fill priority style={{ objectFit:"cover", objectPosition:"center 60%" }} />
           <div style={{ position:"absolute", inset:0, background:"linear-gradient(100deg, rgba(10,8,6,0.88) 0%, rgba(10,8,6,0.65) 55%, rgba(10,8,6,0.4) 100%)" }} />
         </div>
         <div style={{ maxWidth:"1280px", margin:"0 auto", padding:"0 40px", position:"relative", zIndex:2 }}>
