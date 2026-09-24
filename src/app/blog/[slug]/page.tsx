@@ -21,7 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.title,
     description: post.excerpt,
-    keywords: `${post.category.toLowerCase()}, hinge manufacturer India, ${post.title.toLowerCase()}`,
+    keywords: post.keywords?.length
+      ? [...post.keywords, BRAND].join(", ")
+      : `${post.category.toLowerCase()}, hinge manufacturer India, ${post.title.toLowerCase()}`,
     alternates: { canonical: url },
     openGraph: {
       title: `${post.title} | ${BRAND}`,
@@ -54,9 +56,27 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     description: post.excerpt,
     image: `${SITE_URL}${post.coverImage}`,
     datePublished: post.date,
-    author: { "@type": "Organization", name: BRAND },
-    publisher: { "@type": "Organization", name: BRAND },
+    dateModified: post.date,
+    ...(post.keywords?.length ? { keywords: post.keywords.join(", ") } : {}),
+    articleSection: post.category,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/${post.slug}` },
+    author: { "@type": "Organization", name: BRAND, url: SITE_URL },
+    publisher: { "@type": "Organization", name: BRAND, url: SITE_URL },
   };
+
+  const faqJsonLd = post.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    : null;
+
+  const productHref = post.productCategory ? `/products?cat=${post.productCategory}` : "/products";
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -74,6 +94,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
 
       {/* BREADCRUMB */}
       <div style={{ background:"#f7f6f3", borderBottom:"1px solid #e5e2db", paddingTop:"var(--nav-h)" }}>
@@ -105,14 +126,33 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div style={{ fontSize:"13px", color:"#999", marginBottom:"32px", paddingBottom:"24px", borderBottom:"1px solid #e5e2db" }}>
             Published by {BRAND} · {new Date(post.date).toLocaleDateString("en-IN", { year:"numeric", month:"long", day:"numeric" })}
           </div>
-          {post.content.map((para, i) => (
-            <p key={i} style={{ fontSize:"16px", color:"#444", lineHeight:"1.85", marginBottom:"22px" }}>{para}</p>
-          ))}
+          {post.content.map((para, i) =>
+            para.startsWith("## ") ? (
+              <h2 key={i} style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(22px, 2.6vw, 28px)", fontWeight:800, color:"#1a1a1a", lineHeight:1.2, margin:"36px 0 14px" }}>{para.slice(3)}</h2>
+            ) : (
+              <p key={i} style={{ fontSize:"16px", color:"#444", lineHeight:"1.85", marginBottom:"22px" }}>{para}</p>
+            )
+          )}
+
+          {post.faqs?.length ? (
+            <section style={{ marginTop:"44px" }}>
+              <h2 style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"clamp(22px, 2.6vw, 28px)", fontWeight:800, color:"#1a1a1a", lineHeight:1.2, marginBottom:"18px" }}>Frequently Asked Questions</h2>
+              {post.faqs.map((f) => (
+                <div key={f.q} style={{ borderTop:"1px solid #e5e2db", padding:"18px 0" }}>
+                  <h3 style={{ fontSize:"16px", fontWeight:700, color:"#1a1a1a", marginBottom:"8px" }}>{f.q}</h3>
+                  <p style={{ fontSize:"15px", color:"#555", lineHeight:"1.75" }}>{f.a}</p>
+                </div>
+              ))}
+            </section>
+          ) : null}
 
           <div style={{ marginTop:"40px", padding:"28px", background:"#f7f6f3", border:"1px solid #e5e2db", borderRadius:"6px" }}>
-            <div style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"18px", fontWeight:800, color:"#1a1a1a", textTransform:"uppercase", marginBottom:"10px" }}>Need Hinges for Your Project?</div>
-            <p style={{ fontSize:"14px", color:"#666", lineHeight:"1.7", marginBottom:"18px" }}>Our export team responds within 24 hours with pricing, samples, and technical guidance.</p>
-            <Link href="/contact" style={{ background:"#e8a020", color:"#fff", padding:"12px 26px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"13px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", textDecoration:"none", display:"inline-block", borderRadius:"2px" }}>Request a Quote ›</Link>
+            <div style={{ fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"18px", fontWeight:800, color:"#1a1a1a", textTransform:"uppercase", marginBottom:"10px" }}>Need {post.productCategory ? post.category : "Hinges"} for Your Project?</div>
+            <p style={{ fontSize:"14px", color:"#666", lineHeight:"1.7", marginBottom:"18px" }}>The {BRAND} team responds within 24 hours with pricing, samples, and technical guidance.</p>
+            <div style={{ display:"flex", gap:"12px", flexWrap:"wrap" }}>
+              <Link href="/contact" style={{ background:"#e8a020", color:"#fff", padding:"12px 26px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"13px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", textDecoration:"none", display:"inline-block", borderRadius:"2px" }}>Request a Quote ›</Link>
+              <Link href={productHref} style={{ background:"transparent", color:"#1a1a1a", border:"1.5px solid #e5e2db", padding:"12px 26px", fontFamily:"var(--font-barlow), Arial, sans-serif", fontSize:"13px", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", textDecoration:"none", display:"inline-block", borderRadius:"2px" }}>View {post.productCategory ? post.category : "Products"} ›</Link>
+            </div>
           </div>
         </div>
       </article>
